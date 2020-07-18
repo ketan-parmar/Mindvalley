@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Channels View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="ChannelsViewController" id="BYZ-38-t0r" customClass="ChannelsViewController" customModule="Mindvalley" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h02-PJ-Uk2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESq-05-hMy">
+                                <rect key="frame" x="16" y="60" width="382" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ0-r2-vE4">
+                                <rect key="frame" x="16" y="100" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvj-th-YKo">
+                                <rect key="frame" x="16" y="140.5" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.1529411765" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ESq-05-hMy" firstAttribute="leading" secondItem="scr-ks-CIf" secondAttribute="leading" constant="16" id="1wu-Wr-mou"/>
+                            <constraint firstItem="Lvj-th-YKo" firstAttribute="top" secondItem="IJ0-r2-vE4" secondAttribute="bottom" constant="20" id="96J-RD-Btc"/>
+                            <constraint firstItem="scr-ks-CIf" firstAttribute="trailing" secondItem="IJ0-r2-vE4" secondAttribute="trailing" constant="16" id="HOx-4E-tTg"/>
+                            <constraint firstItem="Lvj-th-YKo" firstAttribute="leading" secondItem="scr-ks-CIf" secondAttribute="leading" constant="16" id="Z05-UB-SbF"/>
+                            <constraint firstItem="scr-ks-CIf" firstAttribute="trailing" secondItem="ESq-05-hMy" secondAttribute="trailing" constant="16" id="enI-ua-u4t"/>
+                            <constraint firstItem="IJ0-r2-vE4" firstAttribute="top" secondItem="ESq-05-hMy" secondAttribute="bottom" constant="20" id="f8h-9x-kRy"/>
+                            <constraint firstItem="ESq-05-hMy" firstAttribute="top" secondItem="scr-ks-CIf" secondAttribute="top" constant="16" id="kkq-WD-XqW"/>
+                            <constraint firstItem="IJ0-r2-vE4" firstAttribute="leading" secondItem="scr-ks-CIf" secondAttribute="leading" constant="16" id="ygC-oq-Vic"/>
+                            <constraint firstItem="scr-ks-CIf" firstAttribute="trailing" secondItem="Lvj-th-YKo" secondAttribute="trailing" constant="16" id="z5M-2t-df7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="scr-ks-CIf"/>
                     </view>
+                    <connections>
+                        <outlet property="tempLabel" destination="ESq-05-hMy" id="fqN-ND-3h3"/>
+                        <outlet property="tempLabel2" destination="IJ0-r2-vE4" id="I6a-49-CPU"/>
+                        <outlet property="tempLabel3" destination="Lvj-th-YKo" id="cx1-wO-p1Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="118"/>
         </scene>
     </scenes>
 </document>

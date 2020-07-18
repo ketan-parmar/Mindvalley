@@ -3,16 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74124C3641F005FF542 /* AppDelegate.swift */; };
 		8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74324C3641F005FF542 /* SceneDelegate.swift */; };
-		8424F74624C3641F005FF542 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74524C3641F005FF542 /* ViewController.swift */; };
 		8424F74924C3641F005FF542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8424F74724C3641F005FF542 /* Main.storyboard */; };
 		8424F74B24C36421005FF542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8424F74A24C36421005FF542 /* Assets.xcassets */; };
 		8424F74E24C36421005FF542 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8424F74C24C36421005FF542 /* LaunchScreen.storyboard */; };
+		8424F75924C367BC005FF542 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F75824C367BC005FF542 /* APIManager.swift */; };
+		8424F76024C3689A005FF542 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F75F24C3689A005FF542 /* ChannelsViewController.swift */; };
+		8424F76224C368C6005FF542 /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76124C368C6005FF542 /* ChannelsViewModel.swift */; };
+		8424F76424C368EB005FF542 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76324C368EB005FF542 /* CategoriesModel.swift */; };
+		8424F76624C3690A005FF542 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76524C3690A005FF542 /* MediaModel.swift */; };
+		8424F76824C36924005FF542 /* MediaChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76724C36924005FF542 /* MediaChannel.swift */; };
+		8424F76A24C3693F005FF542 /* MediaCoverAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76924C3693F005FF542 /* MediaCoverAsset.swift */; };
+		8424F76C24C36957005FF542 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76B24C36957005FF542 /* ChannelModel.swift */; };
+		8424F76E24C3697F005FF542 /* ChannelCoverAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76D24C3697F005FF542 /* ChannelCoverAsset.swift */; };
+		8424F77024C3699A005FF542 /* ChannelIconAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76F24C3699A005FF542 /* ChannelIconAsset.swift */; };
+		8424F77224C369B2005FF542 /* ChannelLatestMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F77124C369B2005FF542 /* ChannelLatestMedia.swift */; };
+		8424F77424C369CC005FF542 /* ChannelSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F77324C369CC005FF542 /* ChannelSeries.swift */; };
 		CE0555F968AB4B4DAC1D53DB /* Pods_Mindvalley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +33,22 @@
 		8424F73E24C3641F005FF542 /* Mindvalley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindvalley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8424F74124C3641F005FF542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8424F74324C3641F005FF542 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8424F74524C3641F005FF542 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8424F74824C3641F005FF542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8424F74A24C36421005FF542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8424F74D24C36421005FF542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8424F74F24C36421005FF542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8424F75824C367BC005FF542 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8424F75F24C3689A005FF542 /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
+		8424F76124C368C6005FF542 /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
+		8424F76324C368EB005FF542 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		8424F76524C3690A005FF542 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
+		8424F76724C36924005FF542 /* MediaChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaChannel.swift; sourceTree = "<group>"; };
+		8424F76924C3693F005FF542 /* MediaCoverAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCoverAsset.swift; sourceTree = "<group>"; };
+		8424F76B24C36957005FF542 /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
+		8424F76D24C3697F005FF542 /* ChannelCoverAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCoverAsset.swift; sourceTree = "<group>"; };
+		8424F76F24C3699A005FF542 /* ChannelIconAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelIconAsset.swift; sourceTree = "<group>"; };
+		8424F77124C369B2005FF542 /* ChannelLatestMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelLatestMedia.swift; sourceTree = "<group>"; };
+		8424F77324C369CC005FF542 /* ChannelSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSeries.swift; sourceTree = "<group>"; };
 		EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindvalley.release.xcconfig"; path = "Target Support Files/Pods-Mindvalley/Pods-Mindvalley.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +70,6 @@
 				13629D349065DFF800D12AA9 /* Pods-Mindvalley.debug.xcconfig */,
 				EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -77,7 +98,6 @@
 				8424F75524C364A8005FF542 /* Supporting Classes */,
 				8424F74124C3641F005FF542 /* AppDelegate.swift */,
 				8424F74324C3641F005FF542 /* SceneDelegate.swift */,
-				8424F74524C3641F005FF542 /* ViewController.swift */,
 				8424F74724C3641F005FF542 /* Main.storyboard */,
 				8424F74A24C36421005FF542 /* Assets.xcassets */,
 				8424F74C24C36421005FF542 /* LaunchScreen.storyboard */,
@@ -89,6 +109,7 @@
 		8424F75524C364A8005FF542 /* Supporting Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8424F75724C36788005FF542 /* Webservices */,
 			);
 			path = "Supporting Classes";
 			sourceTree = "<group>";
@@ -96,8 +117,67 @@
 		8424F75624C364D3005FF542 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8424F75A24C3683D005FF542 /* Channels */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		8424F75724C36788005FF542 /* Webservices */ = {
+			isa = PBXGroup;
+			children = (
+				8424F75824C367BC005FF542 /* APIManager.swift */,
+			);
+			path = Webservices;
+			sourceTree = "<group>";
+		};
+		8424F75A24C3683D005FF542 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				8424F75B24C36849005FF542 /* Model */,
+				8424F75E24C36869005FF542 /* View */,
+				8424F75C24C36856005FF542 /* View Model */,
+				8424F75D24C36861005FF542 /* Controller */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		8424F75B24C36849005FF542 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8424F76324C368EB005FF542 /* CategoriesModel.swift */,
+				8424F76524C3690A005FF542 /* MediaModel.swift */,
+				8424F76724C36924005FF542 /* MediaChannel.swift */,
+				8424F76924C3693F005FF542 /* MediaCoverAsset.swift */,
+				8424F76B24C36957005FF542 /* ChannelModel.swift */,
+				8424F76D24C3697F005FF542 /* ChannelCoverAsset.swift */,
+				8424F76F24C3699A005FF542 /* ChannelIconAsset.swift */,
+				8424F77124C369B2005FF542 /* ChannelLatestMedia.swift */,
+				8424F77324C369CC005FF542 /* ChannelSeries.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8424F75C24C36856005FF542 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				8424F76124C368C6005FF542 /* ChannelsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		8424F75D24C36861005FF542 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8424F75F24C3689A005FF542 /* ChannelsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8424F75E24C36869005FF542 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CE725F5821F7039509351A5D /* Frameworks */ = {
@@ -223,9 +303,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8424F74624C3641F005FF542 /* ViewController.swift in Sources */,
+				8424F77424C369CC005FF542 /* ChannelSeries.swift in Sources */,
+				8424F76224C368C6005FF542 /* ChannelsViewModel.swift in Sources */,
+				8424F76024C3689A005FF542 /* ChannelsViewController.swift in Sources */,
+				8424F76C24C36957005FF542 /* ChannelModel.swift in Sources */,
+				8424F77224C369B2005FF542 /* ChannelLatestMedia.swift in Sources */,
+				8424F75924C367BC005FF542 /* APIManager.swift in Sources */,
+				8424F76824C36924005FF542 /* MediaChannel.swift in Sources */,
+				8424F77024C3699A005FF542 /* ChannelIconAsset.swift in Sources */,
+				8424F76624C3690A005FF542 /* MediaModel.swift in Sources */,
+				8424F76424C368EB005FF542 /* CategoriesModel.swift in Sources */,
 				8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */,
 				8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */,
+				8424F76E24C3697F005FF542 /* ChannelCoverAsset.swift in Sources */,
+				8424F76A24C3693F005FF542 /* MediaCoverAsset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
