@@ -95,12 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				8424F75624C364D3005FF542 /* Modules */,
+				8424F77624C36B9E005FF542 /* Storyboards */,
 				8424F75524C364A8005FF542 /* Supporting Classes */,
+				8424F77524C36B89005FF542 /* Resources */,
 				8424F74124C3641F005FF542 /* AppDelegate.swift */,
 				8424F74324C3641F005FF542 /* SceneDelegate.swift */,
-				8424F74724C3641F005FF542 /* Main.storyboard */,
-				8424F74A24C36421005FF542 /* Assets.xcassets */,
-				8424F74C24C36421005FF542 /* LaunchScreen.storyboard */,
 				8424F74F24C36421005FF542 /* Info.plist */,
 			);
 			path = Mindvalley;
@@ -178,6 +177,23 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8424F77524C36B89005FF542 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8424F74A24C36421005FF542 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8424F77624C36B9E005FF542 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8424F74724C3641F005FF542 /* Main.storyboard */,
+				8424F74C24C36421005FF542 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		CE725F5821F7039509351A5D /* Frameworks */ = {
