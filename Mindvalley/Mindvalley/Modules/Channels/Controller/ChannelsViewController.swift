@@ -18,27 +18,16 @@ class ChannelsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      //  self.view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
-
-//        self.view.backgroundColor = UIColor(red: 0.14, green: 0.15, blue:  0.18, alpha: 1)
-       // view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
+        setupUI()
+    }
+    
+    func setupUI() {
+        self.navigationController?.navigationBar.setNavigationBarAppearance()
         channelsTableView.delegate = self
         channelsTableView.dataSource = self
-//
-//     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.isTranslucent = true
-//        self.navigationController?.view.backgroundColor = .clear
-        
-    //    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-         //self.navigationController?.navigationBar.isTranslucent = true
-    //    self.navigationController?.navigationBar.shadowImage = UIImage()
-    //    self.navigationController?.navigationBar.backgroundColor = UIColor.blue.withAlphaComponent(0.1)
-       //  self.navigationController?.navigationBar.barTintColor = UIColor.blue.withAlphaComponent(0.1)
-        
-        //self.navigationController?.navigationBar.
     }
+    
+    
     
     func fetchData() {
         

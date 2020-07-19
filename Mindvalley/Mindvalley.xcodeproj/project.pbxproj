@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841617F124C4532E00C3FB33 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617F024C4532E00C3FB33 /* Extensions.swift */; };
 		8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74124C3641F005FF542 /* AppDelegate.swift */; };
 		8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74324C3641F005FF542 /* SceneDelegate.swift */; };
 		8424F74924C3641F005FF542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8424F74724C3641F005FF542 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		13629D349065DFF800D12AA9 /* Pods-Mindvalley.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindvalley.debug.xcconfig"; path = "Target Support Files/Pods-Mindvalley/Pods-Mindvalley.debug.xcconfig"; sourceTree = "<group>"; };
 		4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mindvalley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		841617F024C4532E00C3FB33 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8424F73E24C3641F005FF542 /* Mindvalley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindvalley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8424F74124C3641F005FF542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8424F74324C3641F005FF542 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		841617EF24C4531500C3FB33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				841617F024C4532E00C3FB33 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8424F73524C3641F005FF542 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		8424F75524C364A8005FF542 /* Supporting Classes */ = {
 			isa = PBXGroup;
 			children = (
+				841617EF24C4531500C3FB33 /* Extensions */,
 				8424F75724C36788005FF542 /* Webservices */,
 			);
 			path = "Supporting Classes";
@@ -401,6 +412,7 @@
 				8424F76624C3690A005FF542 /* MediaModel.swift in Sources */,
 				8424F76424C368EB005FF542 /* CategoriesModel.swift in Sources */,
 				8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */,
+				841617F124C4532E00C3FB33 /* Extensions.swift in Sources */,
 				8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */,
 				8424F76E24C3697F005FF542 /* ChannelCoverAsset.swift in Sources */,
 				8424F79424C37E00005FF542 /* NewEpisodesTableViewCell.swift in Sources */,
