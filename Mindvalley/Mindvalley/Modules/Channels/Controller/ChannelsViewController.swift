@@ -19,6 +19,7 @@ class ChannelsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchData()
     }
     
     func setupUI() {
@@ -37,7 +38,7 @@ class ChannelsViewController: UIViewController {
                     print(category.name as String)
                 }
             } else {
-                print(errorMessage ?? "Something went wrong")
+                print(errorMessage ?? Messages.somethingWentWrong)
             }
         }
         
@@ -49,7 +50,7 @@ class ChannelsViewController: UIViewController {
                     print(media.title + ", ")
                 }
             } else {
-               print(errorMessage ?? "Something went wrong")
+               print(errorMessage ?? Messages.somethingWentWrong)
             }
         }
         
@@ -67,7 +68,7 @@ class ChannelsViewController: UIViewController {
                 }
                 print("icon asset count = \(counter)")
             } else {
-                print(errorMessage ?? "Something went wrong")
+                print(errorMessage ?? Messages.somethingWentWrong)
             }
         }
     }

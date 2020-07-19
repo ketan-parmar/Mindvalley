@@ -13,10 +13,9 @@ class APIManager {
     
     static let shared = APIManager()
     
-    func getRequest(url: String, endPoint: String, completionHandler:@escaping(_ response: [String: Any]?, _ error: Error?) -> Void) {
+    func getRequest(endPoint: String, completionHandler:@escaping(_ response: [String: Any]?, _ error: Error?) -> Void) {
         
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        
         let apiResponsesFolder = documentsURL.appendingPathComponent("API Responses")
         let fileURL = apiResponsesFolder.appendingPathComponent(endPoint)
         
@@ -25,6 +24,7 @@ class APIManager {
             let destination: DownloadRequest.Destination = { _, _ in
                 return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
             }
+            let url = ApiConfiguration.shared.baseURL + endPoint
             
             let request = AF.download(url, interceptor: nil, to: destination)
             request.responseJSON { (response) in
