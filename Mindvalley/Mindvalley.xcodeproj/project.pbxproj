@@ -145,6 +145,14 @@
 			path = Messages;
 			sourceTree = "<group>";
 		};
+		841617FF24C4756900C3FB33 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8424F74A24C36421005FF542 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		8424F73524C3641F005FF542 = {
 			isa = PBXGroup;
 			children = (
@@ -261,8 +269,8 @@
 		8424F77524C36B89005FF542 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				841617FF24C4756900C3FB33 /* Assets */,
 				8424F77724C377A3005FF542 /* Fonts */,
-				8424F74A24C36421005FF542 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -617,7 +625,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Star Provisioning profile";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -638,7 +646,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Star Provisioning profile";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
