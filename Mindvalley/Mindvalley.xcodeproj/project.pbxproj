@@ -37,6 +37,7 @@
 		8424F79024C377C0005FF542 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78324C377BF005FF542 /* Roboto-Regular.ttf */; };
 		8424F79124C377C0005FF542 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78424C377BF005FF542 /* Roboto-Thin.ttf */; };
 		8424F79224C377C0005FF542 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */; };
+		8424F79424C37E00005FF542 /* NewEpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */; };
 		CE0555F968AB4B4DAC1D53DB /* Pods_Mindvalley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		8424F78324C377BF005FF542 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		8424F78424C377BF005FF542 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesTableViewCell.swift; sourceTree = "<group>"; };
 		EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindvalley.release.xcconfig"; path = "Target Support Files/Pods-Mindvalley/Pods-Mindvalley.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 		8424F75E24C36869005FF542 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */,
 				8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */,
 				8424F76E24C3697F005FF542 /* ChannelCoverAsset.swift in Sources */,
+				8424F79424C37E00005FF542 /* NewEpisodesTableViewCell.swift in Sources */,
 				8424F76A24C3693F005FF542 /* MediaCoverAsset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +549,9 @@
 			baseConfigurationReference = 13629D349065DFF800D12AA9 /* Pods-Mindvalley.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = C64GAK5X6W;
 				INFOPLIST_FILE = Mindvalley/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -553,6 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ketanparmar.Mindvalley;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Star Provisioning profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -563,7 +570,9 @@
 			baseConfigurationReference = EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = C64GAK5X6W;
 				INFOPLIST_FILE = Mindvalley/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -571,6 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ketanparmar.Mindvalley;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Star Provisioning profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

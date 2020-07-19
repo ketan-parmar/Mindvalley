@@ -11,26 +11,44 @@ import Alamofire
 import SwiftyJSON
 
 class ChannelsViewController: UIViewController {
-    @IBOutlet weak var tempLabel: UILabel!
-    @IBOutlet weak var tempLabel2: UILabel!
-    @IBOutlet weak var tempLabel3: UILabel!
+    
+    @IBOutlet weak var channelsTableView: UITableView!
+    
     private var channelsViewModel = ChannelsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tempLabel.text = ""
-        tempLabel2.text = ""
-        tempLabel3.text = ""
+      //  self.view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+
+//        self.view.backgroundColor = UIColor(red: 0.14, green: 0.15, blue:  0.18, alpha: 1)
+       // view.layer.backgroundColor = UIColor(red: 0.137, green: 0.153, blue: 0.184, alpha: 1).cgColor
+        channelsTableView.delegate = self
+        channelsTableView.dataSource = self
+//
+//     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = .clear
+        
+    //    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+         //self.navigationController?.navigationBar.isTranslucent = true
+    //    self.navigationController?.navigationBar.shadowImage = UIImage()
+    //    self.navigationController?.navigationBar.backgroundColor = UIColor.blue.withAlphaComponent(0.1)
+       //  self.navigationController?.navigationBar.barTintColor = UIColor.blue.withAlphaComponent(0.1)
+        
+        //self.navigationController?.navigationBar.
+    }
+    
+    func fetchData() {
         
         channelsViewModel.getCategories { (categories, errorMessage) in
             if let categories = categories {
                 for category in categories {
                     print(category.name as String)
-                    self.tempLabel.text! += category.name + ", "
                 }
             } else {
-                self.tempLabel.text = errorMessage
+                print(errorMessage ?? "Something went wrong")
             }
         }
         
@@ -39,10 +57,10 @@ class ChannelsViewController: UIViewController {
         channelsViewModel.getNewEpisodes { (medias, errorMessage) in
             if let medias = medias {
                 for media in medias {
-                    self.tempLabel2.text! += media.title + ", "
+                    print(media.title + ", ")
                 }
             } else {
-                self.tempLabel2.text = errorMessage
+               print(errorMessage ?? "Something went wrong")
             }
         }
         
@@ -54,17 +72,34 @@ class ChannelsViewController: UIViewController {
                 var counter = 0
                 for channel in channels {
                     if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
-                        self.tempLabel3.text! += thumbnailUrl + ", "
+                        print(thumbnailUrl + ", ")
                         counter += 1
                     }
                 }
                 print("icon asset count = \(counter)")
             } else {
-                self.tempLabel3.text = errorMessage
+                print(errorMessage ?? "Something went wrong")
             }
         }
-        
     }
 }
 
+extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewEpisodesTableViewCell", for: indexPath) as? NewEpisodesTableViewCell else { return UITableViewCell() }
+        cell.textLabel?.text = "ketan \(indexPath.row)"
+        return cell
+    }
+    
+    
+}
 
