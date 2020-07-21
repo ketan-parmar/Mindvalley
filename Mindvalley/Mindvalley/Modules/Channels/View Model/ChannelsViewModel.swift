@@ -13,7 +13,7 @@ class ChannelsViewModel {
     
     var medias : [MediaModel] = []
     var categories : [[CategoriesModel]] = []
-    
+    var channels : [ChannelModel] = []
     var numberOfSections = 0
     
     
@@ -69,7 +69,10 @@ class ChannelsViewModel {
                 }
                 
                 let arrChannels = array.map {ChannelModel(fromJson: $0)}
-                
+                if arrChannels.count > 0 {
+                    self.increaseSectionByOne()
+                }
+                self.channels = arrChannels
                 completionHandler(arrChannels,nil)
             } else {
                 completionHandler(nil,error?.localizedDescription ?? Messages.somethingWentWrong)

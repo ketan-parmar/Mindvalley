@@ -52,6 +52,10 @@
 		84847DE824C716C500261E59 /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */; };
 		84847DEB24C7361000261E59 /* CategoriesHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847DE924C7361000261E59 /* CategoriesHeaderTableViewCell.swift */; };
 		84847DEC24C7361000261E59 /* CategoriesHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84847DEA24C7361000261E59 /* CategoriesHeaderTableViewCell.xib */; };
+		84847DEF24C764FE00261E59 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847DED24C764FE00261E59 /* CourseTableViewCell.swift */; };
+		84847DF024C764FE00261E59 /* CourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84847DEE24C764FE00261E59 /* CourseTableViewCell.xib */; };
+		84847DF524C779EA00261E59 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847DF324C779EA00261E59 /* CourseCollectionViewCell.swift */; };
+		84847DF624C779EA00261E59 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84847DF424C779EA00261E59 /* CourseCollectionViewCell.xib */; };
 		CE0555F968AB4B4DAC1D53DB /* Pods_Mindvalley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +109,10 @@
 		84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		84847DE924C7361000261E59 /* CategoriesHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		84847DEA24C7361000261E59 /* CategoriesHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		84847DED24C764FE00261E59 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		84847DEE24C764FE00261E59 /* CourseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseTableViewCell.xib; sourceTree = "<group>"; };
+		84847DF324C779EA00261E59 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		84847DF424C779EA00261E59 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
 		EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindvalley.release.xcconfig"; path = "Target Support Files/Pods-Mindvalley/Pods-Mindvalley.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,6 +292,10 @@
 				84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */,
 				84847DE924C7361000261E59 /* CategoriesHeaderTableViewCell.swift */,
 				84847DEA24C7361000261E59 /* CategoriesHeaderTableViewCell.xib */,
+				84847DED24C764FE00261E59 /* CourseTableViewCell.swift */,
+				84847DEE24C764FE00261E59 /* CourseTableViewCell.xib */,
+				84847DF324C779EA00261E59 /* CourseCollectionViewCell.swift */,
+				84847DF424C779EA00261E59 /* CourseCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,7 +441,9 @@
 				8424F79224C377C0005FF542 /* Roboto-ThinItalic.ttf in Resources */,
 				84847DE824C716C500261E59 /* CategoriesTableViewCell.xib in Resources */,
 				84847DEC24C7361000261E59 /* CategoriesHeaderTableViewCell.xib in Resources */,
+				84847DF624C779EA00261E59 /* CourseCollectionViewCell.xib in Resources */,
 				8424F78724C377C0005FF542 /* Roboto-Black.ttf in Resources */,
+				84847DF024C764FE00261E59 /* CourseTableViewCell.xib in Resources */,
 				8424F74B24C36421005FF542 /* Assets.xcassets in Resources */,
 				8424F74924C3641F005FF542 /* Main.storyboard in Resources */,
 			);
@@ -496,8 +510,10 @@
 				8424F77024C3699A005FF542 /* ChannelIconAsset.swift in Sources */,
 				841617FC24C46E7400C3FB33 /* Keys.swift in Sources */,
 				841617FE24C46E7F00C3FB33 /* Messages.swift in Sources */,
+				84847DEF24C764FE00261E59 /* CourseTableViewCell.swift in Sources */,
 				8416180224C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift in Sources */,
 				84847DEB24C7361000261E59 /* CategoriesHeaderTableViewCell.swift in Sources */,
+				84847DF524C779EA00261E59 /* CourseCollectionViewCell.swift in Sources */,
 				8424F76624C3690A005FF542 /* MediaModel.swift in Sources */,
 				8424F76424C368EB005FF542 /* CategoriesModel.swift in Sources */,
 				8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */,

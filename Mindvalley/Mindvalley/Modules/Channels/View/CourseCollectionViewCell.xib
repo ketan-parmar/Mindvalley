@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CourseCollectionViewCell" id="gTV-IL-0wX" customClass="CourseCollectionViewCell" customModule="Mindvalley" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="318"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="152" height="318"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ketan Parmar from savarkundla and ahmedabad AHMEDABAD" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIN-Ns-Jhx">
+                        <rect key="frame" x="4" y="238" width="144" height="60"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-HL-xF9">
+                        <rect key="frame" x="0.0" y="0.0" width="152" height="228"/>
+                        <color key="backgroundColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="228" id="Mg8-8n-G7h"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="vIN-Ns-Jhx" firstAttribute="top" secondItem="c0o-HL-xF9" secondAttribute="bottom" constant="10" id="397-G8-Wiz"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vIN-Ns-Jhx" secondAttribute="bottom" id="7oa-P7-mib"/>
+                <constraint firstItem="vIN-Ns-Jhx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Eht-Yr-oKv"/>
+                <constraint firstAttribute="trailing" secondItem="vIN-Ns-Jhx" secondAttribute="trailing" constant="4" id="Mue-lF-C8m"/>
+                <constraint firstAttribute="trailing" secondItem="c0o-HL-xF9" secondAttribute="trailing" id="mtg-SE-4ud"/>
+                <constraint firstItem="c0o-HL-xF9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="r7y-LS-7KZ"/>
+                <constraint firstItem="c0o-HL-xF9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="u7F-uu-eRw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="342" height="345"/>
+            <connections>
+                <outlet property="courseImageView" destination="c0o-HL-xF9" id="4VP-x8-hHc"/>
+                <outlet property="courseTitleLabel" destination="vIN-Ns-Jhx" id="vMr-5j-Ggu"/>
+            </connections>
+            <point key="canvasLocation" x="-42" y="56"/>
+        </collectionViewCell>
+    </objects>
+</document>

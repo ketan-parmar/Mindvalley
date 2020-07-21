@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class ChannelsViewController: UIViewController {
     
@@ -28,6 +29,9 @@ class ChannelsViewController: UIViewController {
         
         channelsTableView.register(UINib(nibName: "CategoriesHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesHeaderTableViewCell")
         channelsTableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
+        channelsTableView.register(UINib(nibName: "CourseTableViewCell", bundle: nil), forCellReuseIdentifier: "CourseTableViewCell")
+        
+        
         channelsTableView.delegate = self
         channelsTableView.dataSource = self
         channelsTableView.estimatedRowHeight = 1000
@@ -73,6 +77,7 @@ class ChannelsViewController: UIViewController {
                         counter += 1
                     }
                 }
+                self.channelsTableView.reloadData()
                 print("icon asset count = \(counter)")
             } else {
                 print(errorMessage ?? Messages.somethingWentWrong)
@@ -90,10 +95,12 @@ extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
+        } else if section == 1{
+            return channelsViewModel.channels.count
         } else {
             return channelsViewModel.categories.count > 0 ? channelsViewModel.categories.count + 1 : 0
         }
-     }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -102,6 +109,23 @@ extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
             cell.configure(medias: channelsViewModel.medias)
             
             return cell
+        } else if indexPath.section == 1 {
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return UITableViewCell() }
+            let channel = channelsViewModel.channels[indexPath.row]
+            if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
+                cell.courseIconImageView.sd_setImage(with: URL(string: thumbnailUrl), completed: nil)
+            } else {
+                cell.courseIconImageView.image = nil
+            }
+            cell.courseTitle.text = channel.title
+            cell.courseEpisodesCount.text = "\(channel.mediaCount ?? 0) episodes"
+            cell.configure(course: channel.latestMedia)
+            
+            return cell
+            
+            
+            
         } else {
             
             if indexPath.row == 0 {
@@ -113,7 +137,6 @@ extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
                 cell.configure(category: channelsViewModel.categories[indexPath.row - 1])
                 return cell
             }
-            
         }
         
     }

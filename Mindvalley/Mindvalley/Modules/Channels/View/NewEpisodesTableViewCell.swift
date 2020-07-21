@@ -32,8 +32,8 @@ class NewEpisodesTableViewCell: UITableViewCell {
     func configure(medias: [MediaModel]) {
 
         self.medias = medias
-      //  self.newEpisodesCollectionView.reloadData()
-       // self.newEpisodesCollectionView.layoutIfNeeded()
+        self.newEpisodesCollectionView.reloadData()
+        self.newEpisodesCollectionView.layoutIfNeeded()
         
     }
     
