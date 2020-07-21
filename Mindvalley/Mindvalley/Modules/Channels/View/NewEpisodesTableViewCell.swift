@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NewEpisodesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var newEpisodesCollectionView: UICollectionView!
-    
-    let str = "KETAN PARMAR SAVARKUNDLA"
+    var medias : [MediaModel] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,8 +29,9 @@ class NewEpisodesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure() {
-    
+    func configure(medias: [MediaModel]) {
+
+        self.medias = medias
         self.newEpisodesCollectionView.reloadData()
         self.newEpisodesCollectionView.layoutIfNeeded()
         
@@ -41,14 +42,16 @@ class NewEpisodesTableViewCell: UITableViewCell {
 extension NewEpisodesTableViewCell : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return medias.count > 6 ? 6 : medias.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewEpisodesCollectionViewCell", for: indexPath) as? NewEpisodesCollectionViewCell else { return UICollectionViewCell() }
-        cell.newEpisodeChannelTitleLabel.text = str
-        cell.newEpisodeTitleLabel.text = str
+        let media = medias[indexPath.item]
+        cell.newEpisodeChannelTitleLabel.text = media.channel.title
+        cell.newEpisodeTitleLabel.text = media.title
+        cell.newEpisodeImageView.sd_setImage(with: URL(string: media.coverAsset.url), completed: nil)
         cell.layoutIfNeeded()
         return cell
     }

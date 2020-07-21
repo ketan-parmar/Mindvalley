@@ -8,5 +8,6 @@ target 'Mindvalley' do
   # Pods for Mindvalley
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'SDWebImage'
 
 end

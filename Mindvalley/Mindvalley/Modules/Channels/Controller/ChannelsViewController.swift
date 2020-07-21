@@ -50,6 +50,7 @@ class ChannelsViewController: UIViewController {
             if let medias = medias {
                 for media in medias {
                     print(media.title + ", ")
+                    self.channelsTableView.reloadData()
                 }
             } else {
                print(errorMessage ?? Messages.somethingWentWrong)
@@ -79,17 +80,21 @@ class ChannelsViewController: UIViewController {
 extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-    }
+        if section == 0 {
+            return 1
+        } else {
+            return 0
+        }
+     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewEpisodesTableViewCell", for: indexPath) as? NewEpisodesTableViewCell else { return UITableViewCell() }
       //  cell.textLabel?.text = "ketan \(indexPath.row)"
-        cell.configure()
+        cell.configure(medias: channelsViewModel.medias)
         
         return cell
     }

@@ -17,6 +17,7 @@ class NewEpisodesCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        newEpisodeImageView.layer.cornerRadius = 8.0
         // Initialization code
     }
 

@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class ChannelsViewModel {
     
+    var medias : [MediaModel] = []
+    
     func getCategories(completionHandler: @escaping ([CategoriesModel]?, _ errorMessage: String?) -> Void) {
         
         APIManager.shared.getRequest(endPoint: ApiList.categories) { (response, error) in
@@ -37,6 +39,7 @@ class ChannelsViewModel {
                     return
                 }
                 let arrMedias = array.map {MediaModel(fromJson: $0)}
+                self.medias = arrMedias
                 completionHandler(arrMedias, nil)
             } else {
                 completionHandler(nil ,error?.localizedDescription ?? Messages.somethingWentWrong)
