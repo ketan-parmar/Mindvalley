@@ -32,8 +32,8 @@ class NewEpisodesTableViewCell: UITableViewCell {
     func configure(medias: [MediaModel]) {
 
         self.medias = medias
-        self.newEpisodesCollectionView.reloadData()
-        self.newEpisodesCollectionView.layoutIfNeeded()
+      //  self.newEpisodesCollectionView.reloadData()
+       // self.newEpisodesCollectionView.layoutIfNeeded()
         
     }
     
@@ -49,10 +49,11 @@ extension NewEpisodesTableViewCell : UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewEpisodesCollectionViewCell", for: indexPath) as? NewEpisodesCollectionViewCell else { return UICollectionViewCell() }
         let media = medias[indexPath.item]
-        cell.newEpisodeChannelTitleLabel.text = media.channel.title
-        cell.newEpisodeTitleLabel.text = media.title
+        
         cell.newEpisodeImageView.sd_setImage(with: URL(string: media.coverAsset.url), completed: nil)
-        cell.layoutIfNeeded()
+        cell.newEpisodeTitleLabel.text = media.title
+        cell.newEpisodeChannelTitleLabel.text = media.channel.title.uppercased()
+      //  cell.layoutIfNeeded()
         return cell
     }
     
