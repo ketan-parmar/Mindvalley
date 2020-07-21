@@ -13,6 +13,7 @@
 		841617F824C46D5200C3FB33 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617F724C46D5200C3FB33 /* Configuration.swift */; };
 		841617FC24C46E7400C3FB33 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617FB24C46E7400C3FB33 /* Keys.swift */; };
 		841617FE24C46E7F00C3FB33 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617FD24C46E7F00C3FB33 /* Messages.swift */; };
+		8416180224C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416180024C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift */; };
 		8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74124C3641F005FF542 /* AppDelegate.swift */; };
 		8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74324C3641F005FF542 /* SceneDelegate.swift */; };
 		8424F74924C3641F005FF542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8424F74724C3641F005FF542 /* Main.storyboard */; };
@@ -44,6 +45,9 @@
 		8424F79124C377C0005FF542 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78424C377BF005FF542 /* Roboto-Thin.ttf */; };
 		8424F79224C377C0005FF542 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */; };
 		8424F79424C37E00005FF542 /* NewEpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */; };
+		845BDC2F24C4D5F900C471B1 /* ketan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 845BDC2E24C4D5F900C471B1 /* ketan.jpg */; };
+		847939DC24C4B3FE00B1FEA8 /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847939DB24C4B3FE00B1FEA8 /* DynamicHeightCollectionView.swift */; };
+		847939DE24C4C3F400B1FEA8 /* test.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 847939DD24C4C3F400B1FEA8 /* test.PNG */; };
 		CE0555F968AB4B4DAC1D53DB /* Pods_Mindvalley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,7 @@
 		841617F724C46D5200C3FB33 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		841617FB24C46E7400C3FB33 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		841617FD24C46E7F00C3FB33 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		8416180024C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8424F73E24C3641F005FF542 /* Mindvalley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindvalley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8424F74124C3641F005FF542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8424F74324C3641F005FF542 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +94,9 @@
 		8424F78424C377BF005FF542 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesTableViewCell.swift; sourceTree = "<group>"; };
+		845BDC2E24C4D5F900C471B1 /* ketan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ketan.jpg; sourceTree = "<group>"; };
+		847939DB24C4B3FE00B1FEA8 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
+		847939DD24C4C3F400B1FEA8 /* test.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.PNG; sourceTree = "<group>"; };
 		EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindvalley.release.xcconfig"; path = "Target Support Files/Pods-Mindvalley/Pods-Mindvalley.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +196,7 @@
 		8424F75524C364A8005FF542 /* Supporting Classes */ = {
 			isa = PBXGroup;
 			children = (
+				847939DA24C4B3B900B1FEA8 /* Helper Classes */,
 				841617FA24C46E5700C3FB33 /* Messages */,
 				841617F924C46E4F00C3FB33 /* Keys */,
 				841617F624C46D3500C3FB33 /* Configurations */,
@@ -262,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */,
+				8416180024C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +279,8 @@
 		8424F77524C36B89005FF542 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				845BDC2E24C4D5F900C471B1 /* ketan.jpg */,
+				847939DD24C4C3F400B1FEA8 /* test.PNG */,
 				841617FF24C4756900C3FB33 /* Assets */,
 				8424F77724C377A3005FF542 /* Fonts */,
 			);
@@ -310,6 +322,14 @@
 				8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		847939DA24C4B3B900B1FEA8 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				847939DB24C4B3FE00B1FEA8 /* DynamicHeightCollectionView.swift */,
+			);
+			path = "Helper Classes";
 			sourceTree = "<group>";
 		};
 		CE725F5821F7039509351A5D /* Frameworks */ = {
@@ -381,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8424F78924C377C0005FF542 /* Roboto-Bold.ttf in Resources */,
+				847939DE24C4C3F400B1FEA8 /* test.PNG in Resources */,
 				8424F78D24C377C0005FF542 /* Roboto-LightItalic.ttf in Resources */,
 				8424F78F24C377C0005FF542 /* Roboto-MediumItalic.ttf in Resources */,
 				8424F78B24C377C0005FF542 /* Roboto-Italic.ttf in Resources */,
@@ -392,6 +413,7 @@
 				8424F79024C377C0005FF542 /* Roboto-Regular.ttf in Resources */,
 				8424F74E24C36421005FF542 /* LaunchScreen.storyboard in Resources */,
 				8424F78E24C377C0005FF542 /* Roboto-Medium.ttf in Resources */,
+				845BDC2F24C4D5F900C471B1 /* ketan.jpg in Resources */,
 				8424F79224C377C0005FF542 /* Roboto-ThinItalic.ttf in Resources */,
 				8424F78724C377C0005FF542 /* Roboto-Black.ttf in Resources */,
 				8424F74B24C36421005FF542 /* Assets.xcassets in Resources */,
@@ -450,6 +472,7 @@
 			files = (
 				8424F77424C369CC005FF542 /* ChannelSeries.swift in Sources */,
 				8424F76224C368C6005FF542 /* ChannelsViewModel.swift in Sources */,
+				847939DC24C4B3FE00B1FEA8 /* DynamicHeightCollectionView.swift in Sources */,
 				8424F76024C3689A005FF542 /* ChannelsViewController.swift in Sources */,
 				841617F824C46D5200C3FB33 /* Configuration.swift in Sources */,
 				8424F76C24C36957005FF542 /* ChannelModel.swift in Sources */,
@@ -459,6 +482,7 @@
 				8424F77024C3699A005FF542 /* ChannelIconAsset.swift in Sources */,
 				841617FC24C46E7400C3FB33 /* Keys.swift in Sources */,
 				841617FE24C46E7F00C3FB33 /* Messages.swift in Sources */,
+				8416180224C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift in Sources */,
 				8424F76624C3690A005FF542 /* MediaModel.swift in Sources */,
 				8424F76424C368EB005FF542 /* CategoriesModel.swift in Sources */,
 				8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */,

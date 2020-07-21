@@ -21,14 +21,16 @@ class ChannelsViewController: UIViewController {
         setupUI()
         fetchData()
     }
-    
+
     func setupUI() {
+        
         self.navigationController?.navigationBar.setNavigationBarAppearance()
         channelsTableView.delegate = self
         channelsTableView.dataSource = self
+        channelsTableView.estimatedRowHeight = 1000
+        channelsTableView.rowHeight = UITableView.automaticDimension
+        
     }
-    
-    
     
     func fetchData() {
         
@@ -81,15 +83,16 @@ extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewEpisodesTableViewCell", for: indexPath) as? NewEpisodesTableViewCell else { return UITableViewCell() }
-        cell.textLabel?.text = "ketan \(indexPath.row)"
+      //  cell.textLabel?.text = "ketan \(indexPath.row)"
+        cell.configure()
+        
         return cell
     }
-    
     
 }
 
