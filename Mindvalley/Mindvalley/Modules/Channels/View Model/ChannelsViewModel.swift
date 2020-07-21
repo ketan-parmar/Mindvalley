@@ -12,6 +12,10 @@ import SwiftyJSON
 class ChannelsViewModel {
     
     var medias : [MediaModel] = []
+    var categories : [[CategoriesModel]] = []
+    
+    var numberOfSections = 0
+    
     
     func getCategories(completionHandler: @escaping ([CategoriesModel]?, _ errorMessage: String?) -> Void) {
         
@@ -22,6 +26,10 @@ class ChannelsViewModel {
                     return
                 }
                 let arrCateogories = array.map {CategoriesModel(fromJson: $0)}
+                if arrCateogories.count > 0 {
+                    self.increaseSectionByOne()
+                }
+                self.setCategories(categoryArr: arrCateogories)
                 completionHandler(arrCateogories, nil)
             } else {
                 completionHandler(nil, error?.localizedDescription ?? Messages.somethingWentWrong)
@@ -39,6 +47,9 @@ class ChannelsViewModel {
                     return
                 }
                 let arrMedias = array.map {MediaModel(fromJson: $0)}
+                if arrMedias.count > 0 {
+                    self.increaseSectionByOne()
+                }
                 self.medias = arrMedias
                 completionHandler(arrMedias, nil)
             } else {
@@ -65,6 +76,14 @@ class ChannelsViewModel {
             }
         }
         
+    }
+    
+    func setCategories(categoryArr: [CategoriesModel]) {
+        categories = categoryArr.chunked(into: 2)
+    }
+    
+    func increaseSectionByOne() {
+        numberOfSections += 1
     }
 }
 
