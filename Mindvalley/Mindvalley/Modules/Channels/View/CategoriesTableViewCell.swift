@@ -9,8 +9,8 @@
 import UIKit
 
 class CategoriesTableViewCell: UITableViewCell {
-
     
+    //MARK: - Outlets and Variables
     @IBOutlet weak var categoryLabel1: UILabel!
     @IBOutlet weak var categoryLabel2: UILabel!
     @IBOutlet weak var categoryView1: UIView!
@@ -18,19 +18,16 @@ class CategoriesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
+    }
+    
+    //MARK: - UI and Configuration
+    func setupUI() {
         categoryView1.layer.cornerRadius = 30
         categoryView2.layer.cornerRadius = 30
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configure(category: [CategoriesModel]) {
-
         categoryLabel1.text = category[0].name
         if category.count > 1 {
             categoryLabel2.text = category[1].name
@@ -39,7 +36,6 @@ class CategoriesTableViewCell: UITableViewCell {
             categoryLabel2.text = ""
             categoryView2.backgroundColor = .clear
         }
-              
     }
 }
 

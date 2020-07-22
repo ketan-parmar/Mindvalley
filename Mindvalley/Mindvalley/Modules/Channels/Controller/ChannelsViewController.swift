@@ -7,34 +7,30 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import SDWebImage
 
 class ChannelsViewController: UIViewController {
     
+    //MARK: - Outlets and Variables
     @IBOutlet weak var channelsTableView: UITableView!
-    
     private var channelsViewModel = ChannelsViewModel()
     
+    //MARK: - View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         fetchData()
     }
-
+    
+    //MARK: - UI and APIs
     func setupUI() {
         
         self.navigationController?.navigationBar.setNavigationBarAppearance()
-        
-        
         
         channelsTableView.register(UINib(nibName: "NewEpisodesTableViewCell", bundle: nil), forCellReuseIdentifier: "NewEpisodesTableViewCell")
         channelsTableView.register(UINib(nibName: "CategoriesHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesHeaderTableViewCell")
         channelsTableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
         channelsTableView.register(UINib(nibName: "CourseTableViewCell", bundle: nil), forCellReuseIdentifier: "CourseTableViewCell")
         channelsTableView.register(UINib(nibName: "SeriesTableViewCell", bundle: nil), forCellReuseIdentifier: "SeriesTableViewCell")
-        
         
         channelsTableView.delegate = self
         channelsTableView.dataSource = self
@@ -45,158 +41,31 @@ class ChannelsViewController: UIViewController {
     
     func fetchData() {
         
-        channelsViewModel.getCategories { (categories, errorMessage) in
-            if let categories = categories {
-                for category in categories {
-                    print(category.name as String)
-                }
-                self.channelsTableView.reloadData()
-            } else {
-                print(errorMessage ?? Messages.somethingWentWrong)
-            }
+        channelsViewModel.fetchData {
+            self.channelsTableView.reloadData()
+            print("table reloaded")
         }
-        
-        ///
-        
-        channelsViewModel.getNewEpisodes { (medias, errorMessage) in
-            if let medias = medias {
-                for media in medias {
-                    print(media.title + ", ")
-                }
-                self.channelsTableView.reloadData()
-            } else {
-               print(errorMessage ?? Messages.somethingWentWrong)
-            }
-        }
-        
-        ///
-        
-        channelsViewModel.getChannels { (channels, errorMessage) in
-            if let channels = channels {
-                print("total count = \(channels.count)")
-                var counter = 0
-                for channel in channels {
-                    if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
-                        print(thumbnailUrl + ", ")
-                        counter += 1
-                    }
-                }
-                self.channelsTableView.reloadData()
-                print("icon asset count = \(counter)")
-            } else {
-                print(errorMessage ?? Messages.somethingWentWrong)
-            }
-        }
+
     }
 }
 
+//MARK: - Tableview Delegate and Datasource
 extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return channelsViewModel.numberOfSections
+        return channelsViewModel.numberOfSections(in: tableView)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else if section == 1{
-            return channelsViewModel.channels.count
-        } else {
-            return channelsViewModel.categories.count > 0 ? channelsViewModel.categories.count + 1 : 0
-        }
+        return channelsViewModel.tableView(tableView, numberOfRowsInSection: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewEpisodesTableViewCell", for: indexPath) as? NewEpisodesTableViewCell else { return UITableViewCell() }
-            cell.configure(medias: channelsViewModel.medias)
-            
-            return cell
-        } else if indexPath.section == 1 {
-            
-            let channel = channelsViewModel.channels[indexPath.row]
-            
-            if channel.series.count > 0 {
-                
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesTableViewCell", for: indexPath) as? SeriesTableViewCell else { return UITableViewCell() }
-                if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
-                    cell.seriesIconImageView.sd_setImage(with: URL(string: thumbnailUrl), completed: nil)
-                } else {
-                    cell.seriesIconImageView.image = nil
-                }
-                cell.seriesTitle.text = channel.title
-                cell.seriesEpisodesCount.text = "\(channel.mediaCount ?? 0) series"
-                cell.configure(series: channel.series, offset: channelsViewModel.storedOffsets[indexPath.row] ?? 0)
-                
-                return cell
-                
-                
-            } else {
-                
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return UITableViewCell() }
-                
-                if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
-                    cell.courseIconImageView.sd_setImage(with: URL(string: thumbnailUrl), completed: nil)
-                } else {
-                    cell.courseIconImageView.image = nil
-                }
-                cell.courseTitle.text = channel.title
-                cell.courseEpisodesCount.text = "\(channel.mediaCount ?? 0) episodes"
-                cell.configure(course: channel.latestMedia, offset: channelsViewModel.storedOffsets[indexPath.row] ?? 0)
-
-                return cell
-            }
-            
-        } else {
-            
-            if indexPath.row == 0 {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesHeaderTableViewCell", for: indexPath) as? CategoriesHeaderTableViewCell else { return UITableViewCell() }
-                
-                return cell
-            } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as? CategoriesTableViewCell else { return UITableViewCell() }
-                cell.configure(category: channelsViewModel.categories[indexPath.row - 1])
-                return cell
-            }
-        }
-        
+        return channelsViewModel.tableView(tableView, cellForRowAt: indexPath)
     }
     
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//
-//        if indexPath.section == 1 {
-//
-//            let channel = channelsViewModel.channels[indexPath.row]
-//
-//            if channel.series.count > 0 {
-//                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesTableViewCell", for: indexPath) as? SeriesTableViewCell else { return }
-//                cell.collectionViewOffset = channelsViewModel.storedOffsets[indexPath.row] ?? 0
-//
-//            } else {
-//
-//                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return }
-//                cell.collectionViewOffset = channelsViewModel.storedOffsets[indexPath.row] ?? 0
-//            }
-//        }
-//    }
-    
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        if indexPath.section == 1 {
-            
-            let channel = channelsViewModel.channels[indexPath.row]
-            
-            if channel.series.count > 0 {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesTableViewCell", for: indexPath) as? SeriesTableViewCell else { return }
-                channelsViewModel.storedOffsets[indexPath.row] = cell.collectionViewOffset
-                
-            } else {
-                
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return }
-                channelsViewModel.storedOffsets[indexPath.row] = cell.collectionViewOffset
-            }
-        }
+        channelsViewModel.tableView(tableView, didEndDisplaying: cell, forRowAt: indexPath)
     }
 }
 

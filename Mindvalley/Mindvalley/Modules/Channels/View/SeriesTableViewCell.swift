@@ -10,55 +10,50 @@ import UIKit
 
 class SeriesTableViewCell: UITableViewCell {
     
+    //MARK: - Outlets and Variables
     @IBOutlet weak var seriesIconImageView: UIImageView!
     @IBOutlet weak var seriesTitle: UILabel!
     @IBOutlet weak var seriesEpisodesCount: UILabel!
     @IBOutlet weak var seriesCollectionView: DynamicHeightCollectionView!
     
+    ///
     var channelSeries : [ChannelSeries] = []
-    
     var collectionViewOffset: CGFloat {
-           get {
-               return seriesCollectionView.contentOffset.x
-           }
-
-           set {
-               seriesCollectionView.contentOffset.x = newValue
-           }
-       }
+        get {
+            return seriesCollectionView.contentOffset.x
+        }
+        set {
+            seriesCollectionView.contentOffset.x = newValue
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        setupUI()
+    }
+    
+    //MARK: - UI and Configuration
+    func setupUI() {
         seriesCollectionView.register(UINib(nibName: "SeriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SeriesCollectionViewCell")
         seriesCollectionView.dataSource = self
         seriesCollectionView.delegate = self
         seriesIconImageView.layer.cornerRadius = 25
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func configure(series: [ChannelSeries], offset: CGFloat) {
-
-          self.channelSeries = series
-          self.seriesCollectionView.reloadData()
-          self.seriesCollectionView.layoutIfNeeded()
-          self.collectionViewOffset = offset
-      }
+        self.channelSeries = series
+        self.seriesCollectionView.reloadData()
+        self.seriesCollectionView.layoutIfNeeded()
+        self.collectionViewOffset = offset
+    }
     
 }
 
+//MARK: - Collectionview Datasource and Delegates
 extension SeriesTableViewCell : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.channelSeries.count > 6 ? 6 : self.channelSeries.count
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeriesCollectionViewCell", for: indexPath) as? SeriesCollectionViewCell else { return UICollectionViewCell() }
@@ -71,17 +66,12 @@ extension SeriesTableViewCell : UICollectionViewDataSource, UICollectionViewDele
         }
         
         cell.seriesTitleLabel.text = series.title
-      //  cell.layoutIfNeeded()
         return cell
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let size = CGSize(width: floor(UIScreen.main.bounds.width - 60), height: 242)
         return size
-       
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
