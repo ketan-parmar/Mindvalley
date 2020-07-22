@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -60,41 +59,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="" id="Ziv-qW-GyK">
-                                        <rect key="frame" x="0.0" y="23" width="152" height="298"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="O4Z-d1-C3X">
-                                            <rect key="frame" x="0.0" y="0.0" width="152" height="298"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zs2-Kw-x5N">
-                                                    <rect key="frame" x="0.0" y="0.0" width="152" height="228"/>
-                                                    <color key="backgroundColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="228" id="rpV-Fr-lBn"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ketan Parmar from savarkundla and ahmedabad AHMEDABAD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6d-n8-LJF">
-                                                    <rect key="frame" x="4" y="238" width="144" height="59.5"/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="r6d-n8-LJF" firstAttribute="top" secondItem="Zs2-Kw-x5N" secondAttribute="bottom" constant="10" id="5gr-gd-f2d"/>
-                                                <constraint firstItem="Zs2-Kw-x5N" firstAttribute="leading" secondItem="O4Z-d1-C3X" secondAttribute="leading" id="8m8-kF-FLy"/>
-                                                <constraint firstAttribute="trailing" secondItem="r6d-n8-LJF" secondAttribute="trailing" constant="4" id="Lav-cH-atm"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r6d-n8-LJF" secondAttribute="bottom" id="NYO-QP-oJk"/>
-                                                <constraint firstItem="Zs2-Kw-x5N" firstAttribute="top" secondItem="O4Z-d1-C3X" secondAttribute="top" id="f8P-L1-qCK"/>
-                                                <constraint firstItem="r6d-n8-LJF" firstAttribute="leading" secondItem="O4Z-d1-C3X" secondAttribute="leading" constant="4" id="kI9-Dz-uQh"/>
-                                                <constraint firstAttribute="trailing" secondItem="Zs2-Kw-x5N" secondAttribute="trailing" id="qgB-fB-nVP"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="152" height="298"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGV-AQ-r9U">
                                 <rect key="frame" x="10" y="431" width="355" height="1"/>
