@@ -14,7 +14,7 @@ class CourseTableViewCell: UITableViewCell {
     @IBOutlet weak var courseIconImageView: UIImageView!
     @IBOutlet weak var courseTitle: UILabel!
     @IBOutlet weak var courseEpisodesCount: UILabel!
-    @IBOutlet weak var courseCollectionView: DynamicHeightCollectionView!
+    @IBOutlet weak var courseCollectionView: UICollectionView!
     
     ///
     var channelLatestMedia : [ChannelLatestMedia] = []

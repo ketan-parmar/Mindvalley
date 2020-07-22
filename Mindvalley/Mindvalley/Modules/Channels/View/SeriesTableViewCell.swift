@@ -14,7 +14,7 @@ class SeriesTableViewCell: UITableViewCell {
     @IBOutlet weak var seriesIconImageView: UIImageView!
     @IBOutlet weak var seriesTitle: UILabel!
     @IBOutlet weak var seriesEpisodesCount: UILabel!
-    @IBOutlet weak var seriesCollectionView: DynamicHeightCollectionView!
+    @IBOutlet weak var seriesCollectionView: UICollectionView!
     
     ///
     var channelSeries : [ChannelSeries] = []
