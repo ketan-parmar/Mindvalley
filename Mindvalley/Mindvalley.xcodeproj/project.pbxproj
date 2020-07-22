@@ -302,10 +302,6 @@
 				84E6BE1124C83CD1009B577A /* NewEpisodesTableViewCell.xib */,
 				84E6BE1424C83DC0009B577A /* NewEpisodesCollectionViewCell.swift */,
 				84E6BE1524C83DC0009B577A /* NewEpisodesCollectionViewCell.xib */,
-				84847DE524C716C500261E59 /* CategoriesTableViewCell.swift */,
-				84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */,
-				84847DE924C7361000261E59 /* CategoriesHeaderTableViewCell.swift */,
-				84847DEA24C7361000261E59 /* CategoriesHeaderTableViewCell.xib */,
 				84847DED24C764FE00261E59 /* CourseTableViewCell.swift */,
 				84847DEE24C764FE00261E59 /* CourseTableViewCell.xib */,
 				84847DF324C779EA00261E59 /* CourseCollectionViewCell.swift */,
@@ -314,6 +310,10 @@
 				84E6BE0724C81D18009B577A /* SeriesTableViewCell.xib */,
 				84E6BE0C24C81DEB009B577A /* SeriesCollectionViewCell.swift */,
 				84E6BE0D24C81DEB009B577A /* SeriesCollectionViewCell.xib */,
+				84847DE524C716C500261E59 /* CategoriesTableViewCell.swift */,
+				84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */,
+				84847DE924C7361000261E59 /* CategoriesHeaderTableViewCell.swift */,
+				84847DEA24C7361000261E59 /* CategoriesHeaderTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
