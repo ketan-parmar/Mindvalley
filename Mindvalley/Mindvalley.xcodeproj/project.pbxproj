@@ -266,7 +266,6 @@
 		8424F75B24C36849005FF542 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8424F76324C368EB005FF542 /* CategoriesModel.swift */,
 				8424F76524C3690A005FF542 /* MediaModel.swift */,
 				8424F76724C36924005FF542 /* MediaChannel.swift */,
 				8424F76924C3693F005FF542 /* MediaCoverAsset.swift */,
@@ -275,6 +274,7 @@
 				8424F76F24C3699A005FF542 /* ChannelIconAsset.swift */,
 				8424F77124C369B2005FF542 /* ChannelLatestMedia.swift */,
 				8424F77324C369CC005FF542 /* ChannelSeries.swift */,
+				8424F76324C368EB005FF542 /* CategoriesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
