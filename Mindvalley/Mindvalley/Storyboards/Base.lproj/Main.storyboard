@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewEpisodesTableViewCell" rowHeight="500" id="DrD-FC-nK9" customClass="NewEpisodesTableViewCell" customModule="Mindvalley" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="500" id="DrD-FC-nK9">
                                         <rect key="frame" x="0.0" y="28" width="375" height="500"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DrD-FC-nK9" id="CYm-a1-cx2">
@@ -39,7 +39,7 @@
                                                     <rect key="frame" x="0.0" y="30" width="375" height="470"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78X-pr-F92">
-                                                            <rect key="frame" x="20.000000000000007" y="0.0" width="126.66666666666669" height="97"/>
+                                                            <rect key="frame" x="20" y="0.0" width="128.66666666666666" height="97"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
                                                             <color key="textColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             </collectionViewFlowLayout>
                                                             <cells>
-                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="NewEpisodesCollectionViewCell" id="0sS-rk-s4f" customClass="NewEpisodesCollectionViewCell" customModule="Mindvalley" customModuleProvider="target">
+                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="" id="0sS-rk-s4f">
                                                                     <rect key="frame" x="0.0" y="-4.666666666666667" width="152" height="365"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nFL-jw-Z4Y">
@@ -72,13 +72,13 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ketan Parmar from savarkundla and ahmedabad AHMEDABAD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsX-1Z-xLI">
-                                                                                <rect key="frame" x="4" y="238" width="144" height="60"/>
+                                                                                <rect key="frame" x="4" y="237.99999999999997" width="144" height="59.666666666666657"/>
                                                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="DAS AFASDF ASJK SJB ASJB SJDB SADJKBK ASDJKB" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1I-Vi-glb">
-                                                                                <rect key="frame" x="4" y="310" width="128" height="46"/>
+                                                                                <rect key="frame" x="4" y="309.66666666666669" width="128" height="45.666666666666686"/>
                                                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
                                                                                 <color key="textColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -98,11 +98,6 @@
                                                                         </constraints>
                                                                     </collectionViewCellContentView>
                                                                     <size key="customSize" width="152" height="365"/>
-                                                                    <connections>
-                                                                        <outlet property="newEpisodeChannelTitleLabel" destination="R1I-Vi-glb" id="MH0-lM-lAw"/>
-                                                                        <outlet property="newEpisodeImageView" destination="lhr-2P-5lV" id="uMu-51-s3Y"/>
-                                                                        <outlet property="newEpisodeTitleLabel" destination="UsX-1Z-xLI" id="QqM-G2-nkP"/>
-                                                                    </connections>
                                                                 </collectionViewCell>
                                                             </cells>
                                                         </collectionView>
@@ -141,9 +136,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="newEpisodesCollectionView" destination="WFq-fQ-0Bh" id="PYA-Jx-OwU"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewEpisodesCollectionViewCell" id="gTV-IL-0wX" customClass="NewEpisodesCollectionViewCell" customModule="Mindvalley" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="365"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="152" height="365"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1xa-i9-0mf">
+                        <rect key="frame" x="0.0" y="0.0" width="152" height="228"/>
+                        <color key="backgroundColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.61568627450000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="228" id="MHY-UB-8PE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ketan Parmar from savarkundla and ahmedabad AHMEDABAD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHZ-ce-jib">
+                        <rect key="frame" x="4" y="238" width="144" height="60"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="DAS AFASDF ASJK SJB ASJB SJDB SADJKBK ASDJKB" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK9-i8-ccy">
+                        <rect key="frame" x="4" y="310" width="144" height="46"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                        <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="1xa-i9-0mf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="12z-fl-2xP"/>
+                <constraint firstItem="FK9-i8-ccy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="401-5F-9UW"/>
+                <constraint firstAttribute="trailing" secondItem="WHZ-ce-jib" secondAttribute="trailing" constant="4" id="8ln-jC-zqL"/>
+                <constraint firstItem="WHZ-ce-jib" firstAttribute="top" secondItem="1xa-i9-0mf" secondAttribute="bottom" constant="10" id="Al0-vh-VT6"/>
+                <constraint firstAttribute="trailing" secondItem="FK9-i8-ccy" secondAttribute="trailing" constant="4" id="BUh-gA-WDP"/>
+                <constraint firstItem="1xa-i9-0mf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="V5o-fV-b6Y"/>
+                <constraint firstItem="WHZ-ce-jib" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="nNR-0c-doP"/>
+                <constraint firstItem="FK9-i8-ccy" firstAttribute="top" secondItem="WHZ-ce-jib" secondAttribute="bottom" constant="12" id="oS9-PK-TyR"/>
+                <constraint firstAttribute="trailing" secondItem="1xa-i9-0mf" secondAttribute="trailing" id="oa4-t3-HOk"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FK9-i8-ccy" secondAttribute="bottom" id="x8b-hB-TkJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="newEpisodeChannelTitleLabel" destination="FK9-i8-ccy" id="jLK-1v-CVg"/>
+                <outlet property="newEpisodeImageView" destination="1xa-i9-0mf" id="aBg-QJ-zEb"/>
+                <outlet property="newEpisodeTitleLabel" destination="WHZ-ce-jib" id="Wg8-sz-kyO"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="99"/>
+        </collectionViewCell>
+    </objects>
+</document>

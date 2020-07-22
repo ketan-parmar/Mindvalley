@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewEpisodesTableViewCell" id="KGk-i7-Jjw" customClass="NewEpisodesTableViewCell" customModule="Mindvalley" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxN-BL-R2B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhk-WH-OiI">
+                                <rect key="frame" x="20" y="30" width="128.5" height="97"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fRE-nJ-PUh" customClass="DynamicHeightCollectionView" customModule="Mindvalley" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="142" width="375" height="356"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="356" id="Xc8-a5-gWN"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="uGT-5M-5xX">
+                                    <size key="itemSize" width="175" height="345"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1g-hw-XGO">
+                                <rect key="frame" x="10" y="499" width="355" height="1"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.26274509800000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ozh-uI-dFh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K1g-hw-XGO" firstAttribute="leading" secondItem="kxN-BL-R2B" secondAttribute="leading" constant="10" id="FfV-0z-7zz"/>
+                            <constraint firstItem="uhk-WH-OiI" firstAttribute="top" secondItem="kxN-BL-R2B" secondAttribute="top" constant="30" id="IH8-eg-9NS"/>
+                            <constraint firstAttribute="trailing" secondItem="fRE-nJ-PUh" secondAttribute="trailing" id="Jop-T4-iPF"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uhk-WH-OiI" secondAttribute="trailing" constant="20" symbolic="YES" id="Znl-x1-2ED"/>
+                            <constraint firstItem="K1g-hw-XGO" firstAttribute="top" secondItem="fRE-nJ-PUh" secondAttribute="bottom" constant="1" id="ZyH-5p-cM1"/>
+                            <constraint firstItem="uhk-WH-OiI" firstAttribute="leading" secondItem="kxN-BL-R2B" secondAttribute="leading" constant="20" id="iZa-FM-u0I"/>
+                            <constraint firstAttribute="bottom" secondItem="K1g-hw-XGO" secondAttribute="bottom" id="jFb-ee-5dQ"/>
+                            <constraint firstItem="fRE-nJ-PUh" firstAttribute="top" secondItem="uhk-WH-OiI" secondAttribute="bottom" constant="15" id="naK-mv-fki"/>
+                            <constraint firstItem="fRE-nJ-PUh" firstAttribute="leading" secondItem="kxN-BL-R2B" secondAttribute="leading" id="vBQ-qy-WE5"/>
+                            <constraint firstAttribute="trailing" secondItem="K1g-hw-XGO" secondAttribute="trailing" constant="10" id="wvo-vu-s6u"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="kxN-BL-R2B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Mck-QS-KG4"/>
+                    <constraint firstItem="kxN-BL-R2B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cW2-42-efY"/>
+                    <constraint firstAttribute="trailing" secondItem="kxN-BL-R2B" secondAttribute="trailing" id="fSC-6r-D3O"/>
+                    <constraint firstAttribute="bottom" secondItem="kxN-BL-R2B" secondAttribute="bottom" id="j5V-ql-WCf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="newEpisodesCollectionView" destination="fRE-nJ-PUh" id="HOt-R9-Ked"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="107"/>
+        </tableViewCell>
+    </objects>
+</document>

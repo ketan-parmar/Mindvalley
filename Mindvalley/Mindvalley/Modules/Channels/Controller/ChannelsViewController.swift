@@ -27,6 +27,9 @@ class ChannelsViewController: UIViewController {
         
         self.navigationController?.navigationBar.setNavigationBarAppearance()
         
+        
+        
+        channelsTableView.register(UINib(nibName: "NewEpisodesTableViewCell", bundle: nil), forCellReuseIdentifier: "NewEpisodesTableViewCell")
         channelsTableView.register(UINib(nibName: "CategoriesHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesHeaderTableViewCell")
         channelsTableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
         channelsTableView.register(UINib(nibName: "CourseTableViewCell", bundle: nil), forCellReuseIdentifier: "CourseTableViewCell")

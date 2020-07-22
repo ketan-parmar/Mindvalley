@@ -13,7 +13,6 @@
 		841617F824C46D5200C3FB33 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617F724C46D5200C3FB33 /* Configuration.swift */; };
 		841617FC24C46E7400C3FB33 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617FB24C46E7400C3FB33 /* Keys.swift */; };
 		841617FE24C46E7F00C3FB33 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617FD24C46E7F00C3FB33 /* Messages.swift */; };
-		8416180224C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416180024C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift */; };
 		8424F74224C3641F005FF542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74124C3641F005FF542 /* AppDelegate.swift */; };
 		8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F74324C3641F005FF542 /* SceneDelegate.swift */; };
 		8424F74924C3641F005FF542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8424F74724C3641F005FF542 /* Main.storyboard */; };
@@ -44,7 +43,6 @@
 		8424F79024C377C0005FF542 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78324C377BF005FF542 /* Roboto-Regular.ttf */; };
 		8424F79124C377C0005FF542 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78424C377BF005FF542 /* Roboto-Thin.ttf */; };
 		8424F79224C377C0005FF542 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */; };
-		8424F79424C37E00005FF542 /* NewEpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */; };
 		845BDC2F24C4D5F900C471B1 /* ketan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 845BDC2E24C4D5F900C471B1 /* ketan.jpg */; };
 		847939DC24C4B3FE00B1FEA8 /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847939DB24C4B3FE00B1FEA8 /* DynamicHeightCollectionView.swift */; };
 		847939DE24C4C3F400B1FEA8 /* test.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 847939DD24C4C3F400B1FEA8 /* test.PNG */; };
@@ -60,6 +58,10 @@
 		84E6BE0924C81D18009B577A /* SeriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E6BE0724C81D18009B577A /* SeriesTableViewCell.xib */; };
 		84E6BE0E24C81DEB009B577A /* SeriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6BE0C24C81DEB009B577A /* SeriesCollectionViewCell.swift */; };
 		84E6BE0F24C81DEB009B577A /* SeriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E6BE0D24C81DEB009B577A /* SeriesCollectionViewCell.xib */; };
+		84E6BE1224C83CD1009B577A /* NewEpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6BE1024C83CD1009B577A /* NewEpisodesTableViewCell.swift */; };
+		84E6BE1324C83CD1009B577A /* NewEpisodesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E6BE1124C83CD1009B577A /* NewEpisodesTableViewCell.xib */; };
+		84E6BE1624C83DC0009B577A /* NewEpisodesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6BE1424C83DC0009B577A /* NewEpisodesCollectionViewCell.swift */; };
+		84E6BE1724C83DC0009B577A /* NewEpisodesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E6BE1524C83DC0009B577A /* NewEpisodesCollectionViewCell.xib */; };
 		CE0555F968AB4B4DAC1D53DB /* Pods_Mindvalley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +74,6 @@
 		841617F724C46D5200C3FB33 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		841617FB24C46E7400C3FB33 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		841617FD24C46E7F00C3FB33 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
-		8416180024C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8424F73E24C3641F005FF542 /* Mindvalley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindvalley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8424F74124C3641F005FF542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8424F74324C3641F005FF542 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		8424F78324C377BF005FF542 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		8424F78424C377BF005FF542 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesTableViewCell.swift; sourceTree = "<group>"; };
 		845BDC2E24C4D5F900C471B1 /* ketan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ketan.jpg; sourceTree = "<group>"; };
 		847939DB24C4B3FE00B1FEA8 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
 		847939DD24C4C3F400B1FEA8 /* test.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.PNG; sourceTree = "<group>"; };
@@ -121,6 +121,10 @@
 		84E6BE0724C81D18009B577A /* SeriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesTableViewCell.xib; sourceTree = "<group>"; };
 		84E6BE0C24C81DEB009B577A /* SeriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		84E6BE0D24C81DEB009B577A /* SeriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		84E6BE1024C83CD1009B577A /* NewEpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesTableViewCell.swift; sourceTree = "<group>"; };
+		84E6BE1124C83CD1009B577A /* NewEpisodesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEpisodesTableViewCell.xib; sourceTree = "<group>"; };
+		84E6BE1424C83DC0009B577A /* NewEpisodesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesCollectionViewCell.swift; sourceTree = "<group>"; };
+		84E6BE1524C83DC0009B577A /* NewEpisodesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEpisodesCollectionViewCell.xib; sourceTree = "<group>"; };
 		EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindvalley.release.xcconfig"; path = "Target Support Files/Pods-Mindvalley/Pods-Mindvalley.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -294,8 +298,10 @@
 		8424F75E24C36869005FF542 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8424F79324C37E00005FF542 /* NewEpisodesTableViewCell.swift */,
-				8416180024C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift */,
+				84E6BE1024C83CD1009B577A /* NewEpisodesTableViewCell.swift */,
+				84E6BE1124C83CD1009B577A /* NewEpisodesTableViewCell.xib */,
+				84E6BE1424C83DC0009B577A /* NewEpisodesCollectionViewCell.swift */,
+				84E6BE1524C83DC0009B577A /* NewEpisodesCollectionViewCell.xib */,
 				84847DE524C716C500261E59 /* CategoriesTableViewCell.swift */,
 				84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */,
 				84847DE924C7361000261E59 /* CategoriesHeaderTableViewCell.swift */,
@@ -439,6 +445,7 @@
 				8424F78924C377C0005FF542 /* Roboto-Bold.ttf in Resources */,
 				847939DE24C4C3F400B1FEA8 /* test.PNG in Resources */,
 				8424F78D24C377C0005FF542 /* Roboto-LightItalic.ttf in Resources */,
+				84E6BE1324C83CD1009B577A /* NewEpisodesTableViewCell.xib in Resources */,
 				8424F78F24C377C0005FF542 /* Roboto-MediumItalic.ttf in Resources */,
 				8424F78B24C377C0005FF542 /* Roboto-Italic.ttf in Resources */,
 				8424F78C24C377C0005FF542 /* Roboto-Light.ttf in Resources */,
@@ -456,6 +463,7 @@
 				84847DEC24C7361000261E59 /* CategoriesHeaderTableViewCell.xib in Resources */,
 				84847DF624C779EA00261E59 /* CourseCollectionViewCell.xib in Resources */,
 				8424F78724C377C0005FF542 /* Roboto-Black.ttf in Resources */,
+				84E6BE1724C83DC0009B577A /* NewEpisodesCollectionViewCell.xib in Resources */,
 				84847DF024C764FE00261E59 /* CourseTableViewCell.xib in Resources */,
 				8424F74B24C36421005FF542 /* Assets.xcassets in Resources */,
 				8424F74924C3641F005FF542 /* Main.storyboard in Resources */,
@@ -520,13 +528,13 @@
 				84E6BE0E24C81DEB009B577A /* SeriesCollectionViewCell.swift in Sources */,
 				8424F76C24C36957005FF542 /* ChannelModel.swift in Sources */,
 				8424F77224C369B2005FF542 /* ChannelLatestMedia.swift in Sources */,
+				84E6BE1624C83DC0009B577A /* NewEpisodesCollectionViewCell.swift in Sources */,
 				8424F75924C367BC005FF542 /* APIManager.swift in Sources */,
 				8424F76824C36924005FF542 /* MediaChannel.swift in Sources */,
 				8424F77024C3699A005FF542 /* ChannelIconAsset.swift in Sources */,
 				841617FC24C46E7400C3FB33 /* Keys.swift in Sources */,
 				841617FE24C46E7F00C3FB33 /* Messages.swift in Sources */,
 				84847DEF24C764FE00261E59 /* CourseTableViewCell.swift in Sources */,
-				8416180224C47C8200C3FB33 /* NewEpisodesCollectionViewCell.swift in Sources */,
 				84847DEB24C7361000261E59 /* CategoriesHeaderTableViewCell.swift in Sources */,
 				84847DF524C779EA00261E59 /* CourseCollectionViewCell.swift in Sources */,
 				8424F76624C3690A005FF542 /* MediaModel.swift in Sources */,
@@ -539,8 +547,8 @@
 				841617F124C4532E00C3FB33 /* Extensions.swift in Sources */,
 				8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */,
 				8424F76E24C3697F005FF542 /* ChannelCoverAsset.swift in Sources */,
-				8424F79424C37E00005FF542 /* NewEpisodesTableViewCell.swift in Sources */,
 				8424F76A24C3693F005FF542 /* MediaCoverAsset.swift in Sources */,
+				84E6BE1224C83CD1009B577A /* NewEpisodesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
