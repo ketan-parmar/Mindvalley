@@ -21,7 +21,7 @@ class NewEpisodesTableViewCell: UITableViewCell {
     
     //MARK: - UI and Configuration
     func setupUI() {
-        newEpisodesCollectionView.register(UINib(nibName: "NewEpisodesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NewEpisodesCollectionViewCell")
+        newEpisodesCollectionView.register(UINib(nibName: Identifiers.newEpisodesCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.newEpisodesCollectionViewCell)
         newEpisodesCollectionView.dataSource = self
         newEpisodesCollectionView.delegate = self
     }
@@ -41,7 +41,7 @@ extension NewEpisodesTableViewCell : UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewEpisodesCollectionViewCell", for: indexPath) as? NewEpisodesCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.newEpisodesCollectionViewCell, for: indexPath) as? NewEpisodesCollectionViewCell else { return UICollectionViewCell() }
         let media = medias[indexPath.item]
         cell.newEpisodeImageView.sd_setImage(with: URL(string: media.coverAsset.url), completed: nil)
         cell.newEpisodeTitleLabel.text = media.title

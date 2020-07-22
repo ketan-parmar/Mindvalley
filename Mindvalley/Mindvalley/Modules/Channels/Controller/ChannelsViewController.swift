@@ -26,11 +26,15 @@ class ChannelsViewController: UIViewController {
         
         self.navigationController?.navigationBar.setNavigationBarAppearance()
         
-        channelsTableView.register(UINib(nibName: "NewEpisodesTableViewCell", bundle: nil), forCellReuseIdentifier: "NewEpisodesTableViewCell")
-        channelsTableView.register(UINib(nibName: "CategoriesHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesHeaderTableViewCell")
-        channelsTableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
-        channelsTableView.register(UINib(nibName: "CourseTableViewCell", bundle: nil), forCellReuseIdentifier: "CourseTableViewCell")
-        channelsTableView.register(UINib(nibName: "SeriesTableViewCell", bundle: nil), forCellReuseIdentifier: "SeriesTableViewCell")
+        channelsTableView.register(UINib(nibName: Identifiers.newEpisodesTableViewCell, bundle: nil), forCellReuseIdentifier: Identifiers.newEpisodesTableViewCell)
+        
+        channelsTableView.register(UINib(nibName: Identifiers.categoriesHeaderTableViewCell, bundle: nil), forCellReuseIdentifier: Identifiers.categoriesHeaderTableViewCell)
+        
+        channelsTableView.register(UINib(nibName: Identifiers.categoriesTableViewCell, bundle: nil), forCellReuseIdentifier: Identifiers.categoriesTableViewCell)
+        
+        channelsTableView.register(UINib(nibName: Identifiers.courseTableViewCell, bundle: nil), forCellReuseIdentifier: Identifiers.courseTableViewCell)
+        
+        channelsTableView.register(UINib(nibName: Identifiers.seriesTableViewCell, bundle: nil), forCellReuseIdentifier: Identifiers.seriesTableViewCell)
         
         channelsTableView.delegate = self
         channelsTableView.dataSource = self

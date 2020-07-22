@@ -34,7 +34,7 @@ class SeriesTableViewCell: UITableViewCell {
     
     //MARK: - UI and Configuration
     func setupUI() {
-        seriesCollectionView.register(UINib(nibName: "SeriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SeriesCollectionViewCell")
+        seriesCollectionView.register(UINib(nibName: Identifiers.seriesCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.seriesCollectionViewCell)
         seriesCollectionView.dataSource = self
         seriesCollectionView.delegate = self
         seriesIconImageView.layer.cornerRadius = 25
@@ -56,7 +56,7 @@ extension SeriesTableViewCell : UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeriesCollectionViewCell", for: indexPath) as? SeriesCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.seriesCollectionViewCell, for: indexPath) as? SeriesCollectionViewCell else { return UICollectionViewCell() }
         let series = self.channelSeries[indexPath.item]
         
         if let url = series.coverAsset.url {

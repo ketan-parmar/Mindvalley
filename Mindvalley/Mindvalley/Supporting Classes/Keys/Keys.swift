@@ -9,8 +9,13 @@
 import Foundation
 
 struct Keys {
+    
     static let data = "data"
     static let categories = "categories"
     static let media = "media"
     static let channels = "channels"
+    
+    static let series = "series"
+    static let episodes = "episodes"
+    
 }

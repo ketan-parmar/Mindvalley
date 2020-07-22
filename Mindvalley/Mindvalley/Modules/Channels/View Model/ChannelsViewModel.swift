@@ -40,7 +40,7 @@ extension ChannelsViewModel {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewEpisodesTableViewCell", for: indexPath) as? NewEpisodesTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.newEpisodesTableViewCell, for: indexPath) as? NewEpisodesTableViewCell else { return UITableViewCell() }
             cell.configure(medias: medias)
             
             return cell
@@ -50,21 +50,21 @@ extension ChannelsViewModel {
             
             if channel.series.count > 0 {
                 
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesTableViewCell", for: indexPath) as? SeriesTableViewCell else { return UITableViewCell() }
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.seriesTableViewCell, for: indexPath) as? SeriesTableViewCell else { return UITableViewCell() }
                 if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
                     cell.seriesIconImageView.sd_setImage(with: URL(string: thumbnailUrl), completed: nil)
                 } else {
                     cell.seriesIconImageView.image = nil
                 }
                 cell.seriesTitle.text = channel.title
-                cell.seriesEpisodesCount.text = "\(channel.mediaCount ?? 0) series"
+                cell.seriesEpisodesCount.text = "\(channel.mediaCount ?? 0) \(Keys.series)"
                 cell.configure(series: channel.series, offset: storedOffsets[indexPath.row] ?? 0)
                 
                 return cell
                 
             } else {
                 
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return UITableViewCell() }
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.courseTableViewCell, for: indexPath) as? CourseTableViewCell else { return UITableViewCell() }
                 
                 if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
                     cell.courseIconImageView.sd_setImage(with: URL(string: thumbnailUrl), completed: nil)
@@ -72,7 +72,7 @@ extension ChannelsViewModel {
                     cell.courseIconImageView.image = nil
                 }
                 cell.courseTitle.text = channel.title
-                cell.courseEpisodesCount.text = "\(channel.mediaCount ?? 0) episodes"
+                cell.courseEpisodesCount.text = "\(channel.mediaCount ?? 0) \(Keys.episodes)"
                 cell.configure(course: channel.latestMedia, offset: storedOffsets[indexPath.row] ?? 0)
                 
                 return cell
@@ -81,12 +81,13 @@ extension ChannelsViewModel {
         } else {
             
             if indexPath.row == 0 {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesHeaderTableViewCell", for: indexPath) as? CategoriesHeaderTableViewCell else { return UITableViewCell() }
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.categoriesHeaderTableViewCell, for: indexPath) as? CategoriesHeaderTableViewCell else { return UITableViewCell() }
                 
                 return cell
             } else {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as? CategoriesTableViewCell else { return UITableViewCell() }
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.categoriesTableViewCell, for: indexPath) as? CategoriesTableViewCell else { return UITableViewCell() }
                 cell.configure(category: categories[indexPath.row - 1])
+                
                 return cell
             }
         }
@@ -97,7 +98,6 @@ extension ChannelsViewModel {
         if indexPath.section == 1 {
             
             let channel = channels[indexPath.row]
-            
             if channel.series.count > 0 {
                 
                 guard let cell = cell as? SeriesTableViewCell else { return }

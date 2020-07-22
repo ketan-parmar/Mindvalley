@@ -34,7 +34,7 @@ class CourseTableViewCell: UITableViewCell {
     
     //MARK: - UI and Configuration
     func setupUI() {
-        courseCollectionView.register(UINib(nibName: "CourseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CourseCollectionViewCell")
+        courseCollectionView.register(UINib(nibName: Identifiers.courseCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.courseCollectionViewCell)
         courseCollectionView.dataSource = self
         courseCollectionView.delegate = self
         courseIconImageView.layer.cornerRadius = 25
@@ -57,7 +57,7 @@ extension CourseTableViewCell : UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCollectionViewCell", for: indexPath) as? CourseCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.courseCollectionViewCell, for: indexPath) as? CourseCollectionViewCell else { return UICollectionViewCell() }
         let media = self.channelLatestMedia[indexPath.item]
         
         if let url = media.coverAsset.url {
