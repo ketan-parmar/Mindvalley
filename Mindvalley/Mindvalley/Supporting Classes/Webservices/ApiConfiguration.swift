@@ -26,11 +26,11 @@ class ApiConfiguration: NSObject {
             case .production:
                 baseURL = "https://pastebin.com/raw/"
             case .staging:
-                baseURL = ""
+                baseURL = "https://pastebin.com/raw/"
             case .development:
-                baseURL = ""
+                baseURL = "https://pastebin.com/raw/"
             default:
-                baseURL = ""
+                baseURL = "https://pastebin.com/raw/"
             }
         }
     }
