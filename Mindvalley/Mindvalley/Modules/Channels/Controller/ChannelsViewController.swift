@@ -127,7 +127,7 @@ extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
                 }
                 cell.seriesTitle.text = channel.title
                 cell.seriesEpisodesCount.text = "\(channel.mediaCount ?? 0) series"
-                cell.configure(series: channel.series)
+                cell.configure(series: channel.series, offset: channelsViewModel.storedOffsets[indexPath.row] ?? 0)
                 
                 return cell
                 
@@ -143,8 +143,8 @@ extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
                 }
                 cell.courseTitle.text = channel.title
                 cell.courseEpisodesCount.text = "\(channel.mediaCount ?? 0) episodes"
-                cell.configure(course: channel.latestMedia)
-                
+                cell.configure(course: channel.latestMedia, offset: channelsViewModel.storedOffsets[indexPath.row] ?? 0)
+
                 return cell
             }
             
@@ -163,5 +163,40 @@ extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
         
     }
     
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//
+//        if indexPath.section == 1 {
+//
+//            let channel = channelsViewModel.channels[indexPath.row]
+//
+//            if channel.series.count > 0 {
+//                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesTableViewCell", for: indexPath) as? SeriesTableViewCell else { return }
+//                cell.collectionViewOffset = channelsViewModel.storedOffsets[indexPath.row] ?? 0
+//
+//            } else {
+//
+//                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return }
+//                cell.collectionViewOffset = channelsViewModel.storedOffsets[indexPath.row] ?? 0
+//            }
+//        }
+//    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 1 {
+            
+            let channel = channelsViewModel.channels[indexPath.row]
+            
+            if channel.series.count > 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesTableViewCell", for: indexPath) as? SeriesTableViewCell else { return }
+                channelsViewModel.storedOffsets[indexPath.row] = cell.collectionViewOffset
+                
+            } else {
+                
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return }
+                channelsViewModel.storedOffsets[indexPath.row] = cell.collectionViewOffset
+            }
+        }
+    }
 }
 

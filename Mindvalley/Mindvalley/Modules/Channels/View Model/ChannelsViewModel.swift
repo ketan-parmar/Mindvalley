@@ -16,6 +16,7 @@ class ChannelsViewModel {
     var channels : [ChannelModel] = []
     var numberOfSections = 0
     
+    var storedOffsets = [Int: CGFloat]()
     
     func getCategories(completionHandler: @escaping ([CategoriesModel]?, _ errorMessage: String?) -> Void) {
         

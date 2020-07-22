@@ -18,6 +18,15 @@ class CourseTableViewCell: UITableViewCell {
     
     var channelLatestMedia : [ChannelLatestMedia] = []
     
+    var collectionViewOffset: CGFloat {
+        get {
+            return courseCollectionView.contentOffset.x
+        }
+        set {
+            courseCollectionView.contentOffset.x = newValue
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -36,12 +45,12 @@ class CourseTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(course: [ChannelLatestMedia]) {
+    func configure(course: [ChannelLatestMedia], offset: CGFloat) {
 
         self.channelLatestMedia = course
         self.courseCollectionView.reloadData()
         self.courseCollectionView.layoutIfNeeded()
-        
+        self.collectionViewOffset = offset
     }
     
 }

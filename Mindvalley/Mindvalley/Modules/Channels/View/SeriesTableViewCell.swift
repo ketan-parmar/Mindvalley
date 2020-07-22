@@ -17,6 +17,16 @@ class SeriesTableViewCell: UITableViewCell {
     
     var channelSeries : [ChannelSeries] = []
     
+    var collectionViewOffset: CGFloat {
+           get {
+               return seriesCollectionView.contentOffset.x
+           }
+
+           set {
+               seriesCollectionView.contentOffset.x = newValue
+           }
+       }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -33,12 +43,12 @@ class SeriesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(series: [ChannelSeries]) {
+    func configure(series: [ChannelSeries], offset: CGFloat) {
 
           self.channelSeries = series
           self.seriesCollectionView.reloadData()
           self.seriesCollectionView.layoutIfNeeded()
-          
+          self.collectionViewOffset = offset
       }
     
 }
