@@ -19,6 +19,7 @@ class ApiConfiguration: NSObject {
          self.buildEnvironment = .development
          super.init()
      }
+    
     /// Setup build environment for application.
     var buildEnvironment: DevelopmentEnvironment {
         didSet {

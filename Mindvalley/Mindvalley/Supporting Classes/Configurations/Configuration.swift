@@ -11,9 +11,8 @@ import Foundation
 class Configuration {
    
     static let shared = Configuration()
-    
+
     func setInitialConfigurations() {
-        
         ApiConfiguration.shared.buildEnvironment = .production
     }
    

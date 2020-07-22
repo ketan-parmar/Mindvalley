@@ -11,7 +11,6 @@ import UIKit
 
 // MARK: - UINavigationBar
 extension UINavigationBar {
-    
     func setNavigationBarAppearance() {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
@@ -19,7 +18,6 @@ extension UINavigationBar {
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(rgb: 0xC1C1C1, a: 1.0), .font: UIFont(name: "Roboto-Bold", size: 30)!]
         navBarAppearance.backgroundColor = UIColor(rgb: 0x23272F, a: 1.0)
         self.standardAppearance = navBarAppearance
-        //  self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
 }
 
@@ -45,7 +43,6 @@ extension UIColor {
 }
 
 // MARK: - Array
-
 extension Array {
     func chunked(into size: Int) -> [[Element]] {
         return stride(from: 0, to: count, by: size).map {
