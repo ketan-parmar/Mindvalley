@@ -12,7 +12,7 @@ class NewEpisodesTableViewCell: UITableViewCell {
     
     //MARK: - Outlets and Variables
     @IBOutlet weak var newEpisodesCollectionView: UICollectionView!
-    var medias : [MediaModel] = []
+    var episodes : [EpisodeModel] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,8 +26,8 @@ class NewEpisodesTableViewCell: UITableViewCell {
         newEpisodesCollectionView.delegate = self
     }
     
-    func configure(medias: [MediaModel]) {
-        self.medias = medias
+    func configure(episodes: [EpisodeModel]) {
+        self.episodes = episodes
         self.newEpisodesCollectionView.reloadData()
         self.newEpisodesCollectionView.layoutIfNeeded()
     }
@@ -37,15 +37,15 @@ class NewEpisodesTableViewCell: UITableViewCell {
 extension NewEpisodesTableViewCell : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return medias.count > 6 ? 6 : medias.count
+        return episodes.count > 6 ? 6 : episodes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.newEpisodesCollectionViewCell, for: indexPath) as? NewEpisodesCollectionViewCell else { return UICollectionViewCell() }
-        let media = medias[indexPath.item]
-        cell.newEpisodeImageView.sd_setImage(with: URL(string: media.coverAsset.url), completed: nil)
-        cell.newEpisodeTitleLabel.text = media.title
-        cell.newEpisodeChannelTitleLabel.text = media.channel.title.uppercased()
+        let episode = episodes[indexPath.item]
+        cell.newEpisodeImageView.sd_setImage(with: URL(string: episode.coverAsset.url), completed: nil)
+        cell.newEpisodeTitleLabel.text = episode.title
+        cell.newEpisodeChannelTitleLabel.text = episode.channel.title.uppercased()
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

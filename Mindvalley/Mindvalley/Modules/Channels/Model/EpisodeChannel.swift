@@ -1,5 +1,5 @@
 //
-//  MediaCoverAsset.swift
+//  EpisodeChannel.swift
 //  Mindvalley
 //
 //  Created by Admin on 18/07/20.
@@ -10,9 +10,9 @@ import Foundation
 import SwiftyJSON
 
 
-struct MediaCoverAsset {
+struct EpisodeChannel {
     
-    var url : String!
+    var title : String!
     
     /**
      * Instantiate the instance using the passed json values to set the properties values
@@ -21,7 +21,7 @@ struct MediaCoverAsset {
         if json.isEmpty{
             return
         }
-        url = json["url"].stringValue
+        title = json["title"].stringValue
     }
     
 }

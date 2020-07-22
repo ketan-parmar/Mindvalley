@@ -22,9 +22,9 @@
 		8424F76024C3689A005FF542 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F75F24C3689A005FF542 /* ChannelsViewController.swift */; };
 		8424F76224C368C6005FF542 /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76124C368C6005FF542 /* ChannelsViewModel.swift */; };
 		8424F76424C368EB005FF542 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76324C368EB005FF542 /* CategoriesModel.swift */; };
-		8424F76624C3690A005FF542 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76524C3690A005FF542 /* MediaModel.swift */; };
-		8424F76824C36924005FF542 /* MediaChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76724C36924005FF542 /* MediaChannel.swift */; };
-		8424F76A24C3693F005FF542 /* MediaCoverAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76924C3693F005FF542 /* MediaCoverAsset.swift */; };
+		8424F76624C3690A005FF542 /* EpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76524C3690A005FF542 /* EpisodeModel.swift */; };
+		8424F76824C36924005FF542 /* EpisodeChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76724C36924005FF542 /* EpisodeChannel.swift */; };
+		8424F76A24C3693F005FF542 /* EpisodeCoverAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76924C3693F005FF542 /* EpisodeCoverAsset.swift */; };
 		8424F76C24C36957005FF542 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76B24C36957005FF542 /* ChannelModel.swift */; };
 		8424F76E24C3697F005FF542 /* ChannelCoverAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76D24C3697F005FF542 /* ChannelCoverAsset.swift */; };
 		8424F77024C3699A005FF542 /* ChannelIconAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424F76F24C3699A005FF542 /* ChannelIconAsset.swift */; };
@@ -85,9 +85,9 @@
 		8424F75F24C3689A005FF542 /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
 		8424F76124C368C6005FF542 /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
 		8424F76324C368EB005FF542 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
-		8424F76524C3690A005FF542 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
-		8424F76724C36924005FF542 /* MediaChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaChannel.swift; sourceTree = "<group>"; };
-		8424F76924C3693F005FF542 /* MediaCoverAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCoverAsset.swift; sourceTree = "<group>"; };
+		8424F76524C3690A005FF542 /* EpisodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModel.swift; sourceTree = "<group>"; };
+		8424F76724C36924005FF542 /* EpisodeChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeChannel.swift; sourceTree = "<group>"; };
+		8424F76924C3693F005FF542 /* EpisodeCoverAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCoverAsset.swift; sourceTree = "<group>"; };
 		8424F76B24C36957005FF542 /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
 		8424F76D24C3697F005FF542 /* ChannelCoverAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCoverAsset.swift; sourceTree = "<group>"; };
 		8424F76F24C3699A005FF542 /* ChannelIconAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelIconAsset.swift; sourceTree = "<group>"; };
@@ -267,9 +267,9 @@
 		8424F75B24C36849005FF542 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8424F76524C3690A005FF542 /* MediaModel.swift */,
-				8424F76724C36924005FF542 /* MediaChannel.swift */,
-				8424F76924C3693F005FF542 /* MediaCoverAsset.swift */,
+				8424F76524C3690A005FF542 /* EpisodeModel.swift */,
+				8424F76724C36924005FF542 /* EpisodeChannel.swift */,
+				8424F76924C3693F005FF542 /* EpisodeCoverAsset.swift */,
 				8424F76B24C36957005FF542 /* ChannelModel.swift */,
 				8424F76D24C3697F005FF542 /* ChannelCoverAsset.swift */,
 				8424F76F24C3699A005FF542 /* ChannelIconAsset.swift */,
@@ -529,14 +529,14 @@
 				8424F77224C369B2005FF542 /* ChannelLatestMedia.swift in Sources */,
 				84E6BE1624C83DC0009B577A /* NewEpisodesCollectionViewCell.swift in Sources */,
 				8424F75924C367BC005FF542 /* APIManager.swift in Sources */,
-				8424F76824C36924005FF542 /* MediaChannel.swift in Sources */,
+				8424F76824C36924005FF542 /* EpisodeChannel.swift in Sources */,
 				8424F77024C3699A005FF542 /* ChannelIconAsset.swift in Sources */,
 				841617FC24C46E7400C3FB33 /* Keys.swift in Sources */,
 				841617FE24C46E7F00C3FB33 /* Messages.swift in Sources */,
 				84847DEF24C764FE00261E59 /* CourseTableViewCell.swift in Sources */,
 				84847DEB24C7361000261E59 /* CategoriesHeaderTableViewCell.swift in Sources */,
 				84847DF524C779EA00261E59 /* CourseCollectionViewCell.swift in Sources */,
-				8424F76624C3690A005FF542 /* MediaModel.swift in Sources */,
+				8424F76624C3690A005FF542 /* EpisodeModel.swift in Sources */,
 				8424F76424C368EB005FF542 /* CategoriesModel.swift in Sources */,
 				84E6BE0824C81D18009B577A /* SeriesTableViewCell.swift in Sources */,
 				84E6BE1924C8BEDB009B577A /* Identifiers.swift in Sources */,
@@ -547,7 +547,7 @@
 				841617F124C4532E00C3FB33 /* Extensions.swift in Sources */,
 				8424F74424C3641F005FF542 /* SceneDelegate.swift in Sources */,
 				8424F76E24C3697F005FF542 /* ChannelCoverAsset.swift in Sources */,
-				8424F76A24C3693F005FF542 /* MediaCoverAsset.swift in Sources */,
+				8424F76A24C3693F005FF542 /* EpisodeCoverAsset.swift in Sources */,
 				84E6BE1224C83CD1009B577A /* NewEpisodesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

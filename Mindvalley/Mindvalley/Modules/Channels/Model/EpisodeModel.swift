@@ -1,5 +1,5 @@
 //
-//  MediaModel.swift
+//  EpisodeModel.swift
 //  Mindvalley
 //
 //  Created by Admin on 18/07/20.
@@ -10,10 +10,10 @@ import Foundation
 import SwiftyJSON
 
 
-struct MediaModel {
+struct EpisodeModel {
     
-    var channel : MediaChannel!
-    var coverAsset : MediaCoverAsset!
+    var channel : EpisodeChannel!
+    var coverAsset : EpisodeCoverAsset!
     var title : String!
     var type : String!
     
@@ -26,11 +26,11 @@ struct MediaModel {
         }
         let channelJson = json["channel"]
         if !channelJson.isEmpty{
-            channel = MediaChannel(fromJson: channelJson)
+            channel = EpisodeChannel(fromJson: channelJson)
         }
         let coverAssetJson = json["coverAsset"]
         if !coverAssetJson.isEmpty{
-            coverAsset = MediaCoverAsset(fromJson: coverAssetJson)
+            coverAsset = EpisodeCoverAsset(fromJson: coverAssetJson)
         }
         title = json["title"].stringValue
         type = json["type"].stringValue

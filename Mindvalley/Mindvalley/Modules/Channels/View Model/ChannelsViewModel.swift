@@ -13,7 +13,7 @@ import SDWebImage
 class ChannelsViewModel {
     
     //MARK: - Variables
-    var medias : [MediaModel] = []
+    var episodes : [EpisodeModel] = []
     var categories : [[CategoriesModel]] = []
     var channels : [ChannelModel] = []
     var numberOfSections = 0
@@ -41,7 +41,7 @@ extension ChannelsViewModel {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.newEpisodesTableViewCell, for: indexPath) as? NewEpisodesTableViewCell else { return UITableViewCell() }
-            cell.configure(medias: medias)
+            cell.configure(episodes: episodes)
             
             return cell
         } else if indexPath.section == 1 {
@@ -175,7 +175,7 @@ extension ChannelsViewModel {
         }
     }
     
-    func getNewEpisodes(completionHandler: @escaping ([MediaModel]?, _ errorMessage: String?) -> Void) {
+    func getNewEpisodes(completionHandler: @escaping ([EpisodeModel]?, _ errorMessage: String?) -> Void) {
         
         APIManager.shared.getRequest(endPoint: ApiList.episodes) { (response, error) in
             if let response = response {
@@ -183,12 +183,12 @@ extension ChannelsViewModel {
                 guard let array = jsonData[Keys.data][Keys.media].array, array.count > 0 else {
                     return
                 }
-                let arrMedias = array.map {MediaModel(fromJson: $0)}
-                if arrMedias.count > 0 {
+                let arrEpisodes = array.map {EpisodeModel(fromJson: $0)}
+                if arrEpisodes.count > 0 {
                     self.increaseSectionByOne()
                 }
-                self.medias = arrMedias
-                completionHandler(arrMedias, nil)
+                self.episodes = arrEpisodes
+                completionHandler(arrEpisodes, nil)
             } else {
                 completionHandler(nil ,error?.localizedDescription ?? Messages.somethingWentWrong)
             }
