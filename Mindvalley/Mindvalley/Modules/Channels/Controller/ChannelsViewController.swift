@@ -30,6 +30,7 @@ class ChannelsViewController: UIViewController {
         channelsTableView.register(UINib(nibName: "CategoriesHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesHeaderTableViewCell")
         channelsTableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
         channelsTableView.register(UINib(nibName: "CourseTableViewCell", bundle: nil), forCellReuseIdentifier: "CourseTableViewCell")
+        channelsTableView.register(UINib(nibName: "SeriesTableViewCell", bundle: nil), forCellReuseIdentifier: "SeriesTableViewCell")
         
         
         channelsTableView.delegate = self
@@ -111,20 +112,38 @@ extension ChannelsViewController : UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.section == 1 {
             
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return UITableViewCell() }
             let channel = channelsViewModel.channels[indexPath.row]
-            if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
-                cell.courseIconImageView.sd_setImage(with: URL(string: thumbnailUrl), completed: nil)
+            
+            if channel.series.count > 0 {
+                
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesTableViewCell", for: indexPath) as? SeriesTableViewCell else { return UITableViewCell() }
+                if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
+                    cell.seriesIconImageView.sd_setImage(with: URL(string: thumbnailUrl), completed: nil)
+                } else {
+                    cell.seriesIconImageView.image = nil
+                }
+                cell.seriesTitle.text = channel.title
+                cell.seriesEpisodesCount.text = "\(channel.mediaCount ?? 0) series"
+                cell.configure(series: channel.series)
+                
+                return cell
+                
+                
             } else {
-                cell.courseIconImageView.image = nil
+                
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseTableViewCell", for: indexPath) as? CourseTableViewCell else { return UITableViewCell() }
+                
+                if let thumbnailUrl = channel.iconAsset?.thumbnailUrl {
+                    cell.courseIconImageView.sd_setImage(with: URL(string: thumbnailUrl), completed: nil)
+                } else {
+                    cell.courseIconImageView.image = nil
+                }
+                cell.courseTitle.text = channel.title
+                cell.courseEpisodesCount.text = "\(channel.mediaCount ?? 0) episodes"
+                cell.configure(course: channel.latestMedia)
+                
+                return cell
             }
-            cell.courseTitle.text = channel.title
-            cell.courseEpisodesCount.text = "\(channel.mediaCount ?? 0) episodes"
-            cell.configure(course: channel.latestMedia)
-            
-            return cell
-            
-            
             
         } else {
             
