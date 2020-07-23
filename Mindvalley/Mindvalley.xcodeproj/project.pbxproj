@@ -44,12 +44,10 @@
 		8424F79024C377C0005FF542 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78324C377BF005FF542 /* Roboto-Regular.ttf */; };
 		8424F79124C377C0005FF542 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78424C377BF005FF542 /* Roboto-Thin.ttf */; };
 		8424F79224C377C0005FF542 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */; };
-		845BDC2F24C4D5F900C471B1 /* ketan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 845BDC2E24C4D5F900C471B1 /* ketan.jpg */; };
 		8461552224C970D400232675 /* MindvalleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461552124C970D400232675 /* MindvalleyTests.swift */; };
 		8461552E24C974C700232675 /* Categories in Resources */ = {isa = PBXBuildFile; fileRef = 8461552B24C974C700232675 /* Categories */; };
 		8461552F24C974C700232675 /* Channels in Resources */ = {isa = PBXBuildFile; fileRef = 8461552C24C974C700232675 /* Channels */; };
 		8461553024C974C700232675 /* Episodes in Resources */ = {isa = PBXBuildFile; fileRef = 8461552D24C974C700232675 /* Episodes */; };
-		847939DE24C4C3F400B1FEA8 /* test.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 847939DD24C4C3F400B1FEA8 /* test.PNG */; };
 		84847DE724C716C500261E59 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847DE524C716C500261E59 /* CategoriesTableViewCell.swift */; };
 		84847DE824C716C500261E59 /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */; };
 		84847DEB24C7361000261E59 /* CategoriesHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847DE924C7361000261E59 /* CategoriesHeaderTableViewCell.swift */; };
@@ -123,14 +121,12 @@
 		8424F78324C377BF005FF542 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		8424F78424C377BF005FF542 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		845BDC2E24C4D5F900C471B1 /* ketan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ketan.jpg; sourceTree = "<group>"; };
 		8461551F24C970D400232675 /* MindvalleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindvalleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8461552124C970D400232675 /* MindvalleyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindvalleyTests.swift; sourceTree = "<group>"; };
 		8461552324C970D400232675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8461552B24C974C700232675 /* Categories */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Categories; sourceTree = "<group>"; };
 		8461552C24C974C700232675 /* Channels */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Channels; sourceTree = "<group>"; };
 		8461552D24C974C700232675 /* Episodes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Episodes; sourceTree = "<group>"; };
-		847939DD24C4C3F400B1FEA8 /* test.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.PNG; sourceTree = "<group>"; };
 		84847DE524C716C500261E59 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		84847DE924C7361000261E59 /* CategoriesHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -357,8 +353,6 @@
 		8424F77524C36B89005FF542 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				845BDC2E24C4D5F900C471B1 /* ketan.jpg */,
-				847939DD24C4C3F400B1FEA8 /* test.PNG */,
 				841617FF24C4756900C3FB33 /* Assets */,
 				8424F77724C377A3005FF542 /* Fonts */,
 			);
@@ -524,7 +518,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8424F78924C377C0005FF542 /* Roboto-Bold.ttf in Resources */,
-				847939DE24C4C3F400B1FEA8 /* test.PNG in Resources */,
 				8424F78D24C377C0005FF542 /* Roboto-LightItalic.ttf in Resources */,
 				84E6BE1324C83CD1009B577A /* NewEpisodesTableViewCell.xib in Resources */,
 				8424F78F24C377C0005FF542 /* Roboto-MediumItalic.ttf in Resources */,
@@ -538,7 +531,6 @@
 				8424F79024C377C0005FF542 /* Roboto-Regular.ttf in Resources */,
 				8424F74E24C36421005FF542 /* LaunchScreen.storyboard in Resources */,
 				8424F78E24C377C0005FF542 /* Roboto-Medium.ttf in Resources */,
-				845BDC2F24C4D5F900C471B1 /* ketan.jpg in Resources */,
 				8424F79224C377C0005FF542 /* Roboto-ThinItalic.ttf in Resources */,
 				84847DE824C716C500261E59 /* CategoriesTableViewCell.xib in Resources */,
 				84847DEC24C7361000261E59 /* CategoriesHeaderTableViewCell.xib in Resources */,
