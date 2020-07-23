@@ -52,7 +52,7 @@ class MindvalleyTests: XCTestCase {
     }
     
     ///Episode model setup
-    private func setupEpisodeModel() {
+    func setupEpisodeModel() {
         let bundle = Bundle(for: self.classForCoder)
         let episodeURL = bundle.url(forResource: "Episodes", withExtension: nil)
         guard let data = FileManager.default.contents(atPath: episodeURL!.path) else {
@@ -75,7 +75,7 @@ class MindvalleyTests: XCTestCase {
     }
     
     ///Channel model setup
-    private func setupChannelModel() {
+    func setupChannelModel() {
         let bundle = Bundle(for: self.classForCoder)
         let episodeURL = bundle.url(forResource: "Channels", withExtension: nil)
         guard let data = FileManager.default.contents(atPath: episodeURL!.path) else {
@@ -98,7 +98,7 @@ class MindvalleyTests: XCTestCase {
     }
     
     ///Category model setup
-    private func setupCategoryModel() {
+    func setupCategoryModel() {
         
         let bundle = Bundle(for: self.classForCoder)
         let episodeURL = bundle.url(forResource: "Categories", withExtension: nil)
@@ -125,7 +125,7 @@ class MindvalleyTests: XCTestCase {
     //MARK: - Model Class Tests
     
     ///Test Episode model
-    private func testEpisodeModel() {
+    func testEpisodeModel() {
         XCTAssertEqual(episode.title, expectedEpisodeTitle)
         XCTAssertEqual(episode.channel.title, expectedEpisodeChannelTitle)
         XCTAssertEqual(episode.coverAsset.url, expectedEpisodeCoverAssetUrl)
@@ -135,7 +135,7 @@ class MindvalleyTests: XCTestCase {
     }
     
     ///Test Channel model
-    private func testChannelModel() {
+    func testChannelModel() {
         XCTAssertEqual(channel.title, expectedChannelTitle)
         XCTAssertEqual(channel.mediaCount, expectedChannelMediaCount)
         XCTAssertNotNil(channel.series)
@@ -145,14 +145,14 @@ class MindvalleyTests: XCTestCase {
     }
     
     ///Test Category model
-    private func testCategoryModel() {
+    func testCategoryModel() {
         XCTAssertEqual(category.name, expectedCategoryName)
     }
     
     //MARK: - Channel View Model Test
     
     /// Test fetchdata method
-    private func testFetchDataMethod() {
+    func testFetchDataMethod() {
         
         let promise = expectation(description: "all api calls")
         channelViewModel.fetchData {
@@ -163,13 +163,13 @@ class MindvalleyTests: XCTestCase {
     }
     
     ///Test setCategories method
-    private func testSetCategoryMethod() {
+    func testSetCategoryMethod() {
         channelViewModel.setCategories(categoryArr: categoryArr)
         XCTAssertEqual(channelViewModel.categories.count, 6)
     }
     
     ///Test increaseSectionByOne method
-    private func testIncreaseSectionByOneMethod() {
+    func testIncreaseSectionByOneMethod() {
         let numberOfSections = channelViewModel.numberOfSections
         channelViewModel.increaseSectionByOne()
         XCTAssertEqual(channelViewModel.numberOfSections, numberOfSections + 1)
@@ -178,20 +178,20 @@ class MindvalleyTests: XCTestCase {
     //MARK: - Supporting Classes Test
     
     ///Test setInitialConfigurations method of Configuration class
-    private func testsetInitialConfigurationsMethod() {
+    func testsetInitialConfigurationsMethod() {
         Configuration.shared.setInitialConfigurations()
         XCTAssertEqual(ApiConfiguration.shared.buildEnvironment, DevelopmentEnvironment.production)
     }
     
     ///Test color code to UIColor conversion of Extensions file
-    private func testColorCodeConversation() {
+    func testColorCodeConversation() {
         let whiteColorCode = 0xffffff
         let whiteColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         XCTAssertEqual(UIColor(rgb: whiteColorCode), whiteColor)
     }
     
     ///Test array to chunked array conversion of Extensions file
-    private func testArrayChunkedConversion() {
+    func testArrayChunkedConversion() {
         let arr = [1,2,3,4,5,6]
         let resultArr = [[1,2],[3,4],[5,6]]
         XCTAssertEqual(arr.chunked(into: 2), resultArr)
