@@ -35,6 +35,7 @@ Thanks,
 - Top **2%** influencers of the worldwide community of over **10 million​** ​developers on the StackOverflow with **24000+** reputation. 
 - Received **Apple Editors' Note Award**
 - Secured **#1 position** on the Appstore
+
 [Stackoverflow](https://stackoverflow.com/users/6163022/ketan-parmar?tab=profile)
 [Linkedin](https://www.linkedin.com/in/ketan-parmar-4b779984/)
 [Portfolio](https://ketan-parmar.github.io/documents/portfolio.pdf)
