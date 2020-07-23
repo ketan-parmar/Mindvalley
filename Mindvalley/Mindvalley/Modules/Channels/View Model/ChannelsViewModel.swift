@@ -155,7 +155,7 @@ extension ChannelsViewModel {
         
     }
     
-    func getCategories(completionHandler: @escaping ([CategoriesModel]?, _ errorMessage: String?) -> Void) {
+    private func getCategories(completionHandler: @escaping ([CategoriesModel]?, _ errorMessage: String?) -> Void) {
         
         APIManager.shared.getRequest(endPoint: ApiList.categories) { (response, error) in
             if let response = response {
@@ -175,7 +175,7 @@ extension ChannelsViewModel {
         }
     }
     
-    func getNewEpisodes(completionHandler: @escaping ([EpisodeModel]?, _ errorMessage: String?) -> Void) {
+    private func getNewEpisodes(completionHandler: @escaping ([EpisodeModel]?, _ errorMessage: String?) -> Void) {
         
         APIManager.shared.getRequest(endPoint: ApiList.episodes) { (response, error) in
             if let response = response {
@@ -196,7 +196,7 @@ extension ChannelsViewModel {
     }
     
     
-    func getChannels(completionHandler: @escaping ([ChannelModel]?, _ errorMessage: String?) -> Void) {
+    private func getChannels(completionHandler: @escaping ([ChannelModel]?, _ errorMessage: String?) -> Void) {
         
         APIManager.shared.getRequest(endPoint: ApiList.channels) { (response, error) in
             if let response = response {

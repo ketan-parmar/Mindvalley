@@ -17,7 +17,7 @@ class CourseTableViewCell: UITableViewCell {
     @IBOutlet weak var courseCollectionView: UICollectionView!
     
     ///
-    var channelLatestMedia : [ChannelLatestMedia] = []
+    private var channelLatestMedia : [ChannelLatestMedia] = []
     var collectionViewOffset: CGFloat {
         get {
             return courseCollectionView.contentOffset.x
@@ -33,7 +33,7 @@ class CourseTableViewCell: UITableViewCell {
     }
     
     //MARK: - UI and Configuration
-    func setupUI() {
+    private func setupUI() {
         courseCollectionView.register(UINib(nibName: Identifiers.courseCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.courseCollectionViewCell)
         courseCollectionView.dataSource = self
         courseCollectionView.delegate = self

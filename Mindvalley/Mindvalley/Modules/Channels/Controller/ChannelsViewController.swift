@@ -22,7 +22,7 @@ class ChannelsViewController: UIViewController {
     }
     
     //MARK: - UI and APIs
-    func setupUI() {
+    private func setupUI() {
         
         self.navigationController?.navigationBar.setNavigationBarAppearance()
         
@@ -43,7 +43,7 @@ class ChannelsViewController: UIViewController {
         
     }
     
-    func fetchData() {
+    private func fetchData() {
         
         channelsViewModel.fetchData {
             self.channelsTableView.reloadData()

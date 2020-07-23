@@ -22,7 +22,7 @@ class CategoriesTableViewCell: UITableViewCell {
     }
     
     //MARK: - UI and Configuration
-    func setupUI() {
+    private func setupUI() {
         categoryView1.layer.cornerRadius = 30
         categoryView2.layer.cornerRadius = 30
     }

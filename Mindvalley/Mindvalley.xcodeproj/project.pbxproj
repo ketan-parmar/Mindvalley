@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40E33A6342B9F22EFD944CEE /* libPods-MindvalleyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1F327A6FC0CA4D576F0D48 /* libPods-MindvalleyTests.a */; };
 		841617F124C4532E00C3FB33 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617F024C4532E00C3FB33 /* Extensions.swift */; };
 		841617F324C45E4100C3FB33 /* ApiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617F224C45E4100C3FB33 /* ApiConfiguration.swift */; };
 		841617F524C4605B00C3FB33 /* ApiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841617F424C4605B00C3FB33 /* ApiList.swift */; };
@@ -44,6 +45,10 @@
 		8424F79124C377C0005FF542 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78424C377BF005FF542 /* Roboto-Thin.ttf */; };
 		8424F79224C377C0005FF542 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */; };
 		845BDC2F24C4D5F900C471B1 /* ketan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 845BDC2E24C4D5F900C471B1 /* ketan.jpg */; };
+		8461552224C970D400232675 /* MindvalleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461552124C970D400232675 /* MindvalleyTests.swift */; };
+		8461552E24C974C700232675 /* Categories in Resources */ = {isa = PBXBuildFile; fileRef = 8461552B24C974C700232675 /* Categories */; };
+		8461552F24C974C700232675 /* Channels in Resources */ = {isa = PBXBuildFile; fileRef = 8461552C24C974C700232675 /* Channels */; };
+		8461553024C974C700232675 /* Episodes in Resources */ = {isa = PBXBuildFile; fileRef = 8461552D24C974C700232675 /* Episodes */; };
 		847939DE24C4C3F400B1FEA8 /* test.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 847939DD24C4C3F400B1FEA8 /* test.PNG */; };
 		84847DE724C716C500261E59 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84847DE524C716C500261E59 /* CategoriesTableViewCell.swift */; };
 		84847DE824C716C500261E59 /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */; };
@@ -65,9 +70,21 @@
 		CE0555F968AB4B4DAC1D53DB /* Pods_Mindvalley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8461552424C970D400232675 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8424F73624C3641F005FF542 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8424F73D24C3641F005FF542;
+			remoteInfo = Mindvalley;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0B1F327A6FC0CA4D576F0D48 /* libPods-MindvalleyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindvalleyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13629D349065DFF800D12AA9 /* Pods-Mindvalley.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindvalley.debug.xcconfig"; path = "Target Support Files/Pods-Mindvalley/Pods-Mindvalley.debug.xcconfig"; sourceTree = "<group>"; };
 		4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mindvalley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB7EE2837EDC7FA21E7BD4A /* Pods-MindvalleyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindvalleyTests.release.xcconfig"; path = "Target Support Files/Pods-MindvalleyTests/Pods-MindvalleyTests.release.xcconfig"; sourceTree = "<group>"; };
 		841617F024C4532E00C3FB33 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		841617F224C45E4100C3FB33 /* ApiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfiguration.swift; sourceTree = "<group>"; };
 		841617F424C4605B00C3FB33 /* ApiList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiList.swift; sourceTree = "<group>"; };
@@ -107,6 +124,12 @@
 		8424F78424C377BF005FF542 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		8424F78524C377BF005FF542 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		845BDC2E24C4D5F900C471B1 /* ketan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ketan.jpg; sourceTree = "<group>"; };
+		8461551F24C970D400232675 /* MindvalleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindvalleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8461552124C970D400232675 /* MindvalleyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindvalleyTests.swift; sourceTree = "<group>"; };
+		8461552324C970D400232675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8461552B24C974C700232675 /* Categories */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Categories; sourceTree = "<group>"; };
+		8461552C24C974C700232675 /* Channels */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Channels; sourceTree = "<group>"; };
+		8461552D24C974C700232675 /* Episodes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Episodes; sourceTree = "<group>"; };
 		847939DD24C4C3F400B1FEA8 /* test.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.PNG; sourceTree = "<group>"; };
 		84847DE524C716C500261E59 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		84847DE624C716C500261E59 /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
@@ -125,6 +148,7 @@
 		84E6BE1424C83DC0009B577A /* NewEpisodesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEpisodesCollectionViewCell.swift; sourceTree = "<group>"; };
 		84E6BE1524C83DC0009B577A /* NewEpisodesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEpisodesCollectionViewCell.xib; sourceTree = "<group>"; };
 		84E6BE1824C8BEDB009B577A /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		BA1481D02E2B04B00846F782 /* Pods-MindvalleyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindvalleyTests.debug.xcconfig"; path = "Target Support Files/Pods-MindvalleyTests/Pods-MindvalleyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindvalley.release.xcconfig"; path = "Target Support Files/Pods-Mindvalley/Pods-Mindvalley.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +161,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8461551C24C970D400232675 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E33A6342B9F22EFD944CEE /* libPods-MindvalleyTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,6 +177,8 @@
 			children = (
 				13629D349065DFF800D12AA9 /* Pods-Mindvalley.debug.xcconfig */,
 				EE7C7A299921EB8827D1E893 /* Pods-Mindvalley.release.xcconfig */,
+				BA1481D02E2B04B00846F782 /* Pods-MindvalleyTests.debug.xcconfig */,
+				5DB7EE2837EDC7FA21E7BD4A /* Pods-MindvalleyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -194,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				8424F74024C3641F005FF542 /* Mindvalley */,
+				8461552024C970D400232675 /* MindvalleyTests */,
 				8424F73F24C3641F005FF542 /* Products */,
 				27B71EF727BAE0029FF716E3 /* Pods */,
 				CE725F5821F7039509351A5D /* Frameworks */,
@@ -204,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				8424F73E24C3641F005FF542 /* Mindvalley.app */,
+				8461551F24C970D400232675 /* MindvalleyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,7 +261,6 @@
 		8424F75524C364A8005FF542 /* Supporting Classes */ = {
 			isa = PBXGroup;
 			children = (
-				847939DA24C4B3B900B1FEA8 /* Helper Classes */,
 				841617FA24C46E5700C3FB33 /* Messages */,
 				841617F924C46E4F00C3FB33 /* Keys */,
 				841617F624C46D3500C3FB33 /* Configurations */,
@@ -367,17 +402,39 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
-		847939DA24C4B3B900B1FEA8 /* Helper Classes */ = {
+		8461552024C970D400232675 /* MindvalleyTests */ = {
 			isa = PBXGroup;
 			children = (
+				8461552924C974BB00232675 /* Resources */,
+				8461552124C970D400232675 /* MindvalleyTests.swift */,
+				8461552324C970D400232675 /* Info.plist */,
 			);
-			path = "Helper Classes";
+			path = MindvalleyTests;
+			sourceTree = "<group>";
+		};
+		8461552924C974BB00232675 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8461552A24C974C700232675 /* API Responses */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8461552A24C974C700232675 /* API Responses */ = {
+			isa = PBXGroup;
+			children = (
+				8461552B24C974C700232675 /* Categories */,
+				8461552C24C974C700232675 /* Channels */,
+				8461552D24C974C700232675 /* Episodes */,
+			);
+			path = "API Responses";
 			sourceTree = "<group>";
 		};
 		CE725F5821F7039509351A5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4AC7456D21AEDF2E3597BDDE /* Pods_Mindvalley.framework */,
+				0B1F327A6FC0CA4D576F0D48 /* libPods-MindvalleyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -404,6 +461,25 @@
 			productReference = 8424F73E24C3641F005FF542 /* Mindvalley.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8461551E24C970D400232675 /* MindvalleyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8461552824C970D400232675 /* Build configuration list for PBXNativeTarget "MindvalleyTests" */;
+			buildPhases = (
+				04826453E8E943096265CE81 /* [CP] Check Pods Manifest.lock */,
+				8461551B24C970D400232675 /* Sources */,
+				8461551C24C970D400232675 /* Frameworks */,
+				8461551D24C970D400232675 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8461552524C970D400232675 /* PBXTargetDependency */,
+			);
+			name = MindvalleyTests;
+			productName = MindvalleyTests;
+			productReference = 8461551F24C970D400232675 /* MindvalleyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -416,6 +492,10 @@
 				TargetAttributes = {
 					8424F73D24C3641F005FF542 = {
 						CreatedOnToolsVersion = 11.2.1;
+					};
+					8461551E24C970D400232675 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8424F73D24C3641F005FF542;
 					};
 				};
 			};
@@ -433,6 +513,7 @@
 			projectRoot = "";
 			targets = (
 				8424F73D24C3641F005FF542 /* Mindvalley */,
+				8461551E24C970D400232675 /* MindvalleyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -471,9 +552,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8461551D24C970D400232675 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8461552E24C974C700232675 /* Categories in Resources */,
+				8461553024C974C700232675 /* Episodes in Resources */,
+				8461552F24C974C700232675 /* Channels in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04826453E8E943096265CE81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MindvalleyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AD304C17571F7EE936298A56 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,7 +665,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8461551B24C970D400232675 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8461552224C970D400232675 /* MindvalleyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8461552524C970D400232675 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8424F73D24C3641F005FF542 /* Mindvalley */;
+			targetProxy = 8461552424C970D400232675 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8424F74724C3641F005FF542 /* Main.storyboard */ = {
@@ -730,6 +859,46 @@
 			};
 			name = Release;
 		};
+		8461552624C970D400232675 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA1481D02E2B04B00846F782 /* Pods-MindvalleyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MindvalleyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ketanparmar.MindvalleyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mindvalley.app/Mindvalley";
+			};
+			name = Debug;
+		};
+		8461552724C970D400232675 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DB7EE2837EDC7FA21E7BD4A /* Pods-MindvalleyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MindvalleyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ketanparmar.MindvalleyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mindvalley.app/Mindvalley";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -747,6 +916,15 @@
 			buildConfigurations = (
 				8424F75324C36421005FF542 /* Debug */,
 				8424F75424C36421005FF542 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8461552824C970D400232675 /* Build configuration list for PBXNativeTarget "MindvalleyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8461552624C970D400232675 /* Debug */,
+				8461552724C970D400232675 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

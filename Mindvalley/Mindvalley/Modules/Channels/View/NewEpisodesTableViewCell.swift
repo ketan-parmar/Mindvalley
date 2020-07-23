@@ -12,7 +12,7 @@ class NewEpisodesTableViewCell: UITableViewCell {
     
     //MARK: - Outlets and Variables
     @IBOutlet weak var newEpisodesCollectionView: UICollectionView!
-    var episodes : [EpisodeModel] = []
+    private var episodes : [EpisodeModel] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +20,7 @@ class NewEpisodesTableViewCell: UITableViewCell {
     }
     
     //MARK: - UI and Configuration
-    func setupUI() {
+    private func setupUI() {
         newEpisodesCollectionView.register(UINib(nibName: Identifiers.newEpisodesCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.newEpisodesCollectionViewCell)
         newEpisodesCollectionView.dataSource = self
         newEpisodesCollectionView.delegate = self

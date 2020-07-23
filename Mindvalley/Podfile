@@ -11,3 +11,7 @@ pod 'SwiftyJSON'
 pod 'SDWebImage'
 
 end
+
+target 'MindvalleyTests' do
+pod 'SwiftyJSON'
+end

@@ -17,7 +17,7 @@ class SeriesTableViewCell: UITableViewCell {
     @IBOutlet weak var seriesCollectionView: UICollectionView!
     
     ///
-    var channelSeries : [ChannelSeries] = []
+    private var channelSeries : [ChannelSeries] = []
     var collectionViewOffset: CGFloat {
         get {
             return seriesCollectionView.contentOffset.x
@@ -33,7 +33,7 @@ class SeriesTableViewCell: UITableViewCell {
     }
     
     //MARK: - UI and Configuration
-    func setupUI() {
+    private func setupUI() {
         seriesCollectionView.register(UINib(nibName: Identifiers.seriesCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.seriesCollectionViewCell)
         seriesCollectionView.dataSource = self
         seriesCollectionView.delegate = self
