@@ -93,6 +93,7 @@ extension ChannelsViewModel {
         }
     }
     
+    /// Storing last offset of the collectionview to save the scroll position
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         if indexPath.section == 1 {
