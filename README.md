@@ -11,9 +11,9 @@ Application have default dark theme so, we can design light theme and can displa
 
 ### Notes
 - Used MVVM architecture
-- Used Alamofire to call APIs
-- Used SwiftyJSON for the parsing and managing json
-- Used SDWebImage to cached and manage the images
+- Used [Alamofire](https://github.com/Alamofire/Alamofire) to call APIs
+- Used [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) for the parsing and managing json
+- Used [SDWebImage](https://github.com/SDWebImage/SDWebImage) to cached and manage the images
 - Used [Json Cafe](http://www.jsoncafe.com/) to generate model classes from the api response
 - Installed all the libraries using CocoaPods
 
