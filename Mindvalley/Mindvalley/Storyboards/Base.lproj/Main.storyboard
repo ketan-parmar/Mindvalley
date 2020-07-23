@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Channels-->
         <scene sceneID="tne-QT-ifu">
@@ -15,6 +20,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDS-e8-dOJ">
+                                <rect key="frame" x="0.0" y="140" width="375" height="638"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHS-5j-tdH">
+                                        <rect key="frame" x="40" y="278.66666666666669" width="295" height="81"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong, try again later." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mw4-79-Qmx">
+                                                <rect key="frame" x="5" y="0.0" width="295" height="47"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVV-Ca-C9L">
+                                                <rect key="frame" x="135.66666666666666" y="57" width="24" height="24"/>
+                                                <state key="normal" image="refresh_icon"/>
+                                                <connections>
+                                                    <action selector="refreshButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WNX-ru-xBM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="RVV-Ca-C9L" firstAttribute="top" secondItem="mw4-79-Qmx" secondAttribute="bottom" constant="10" id="Dns-to-gRR"/>
+                                            <constraint firstAttribute="trailing" secondItem="mw4-79-Qmx" secondAttribute="trailing" constant="-5" id="Sgc-lD-osz"/>
+                                            <constraint firstItem="RVV-Ca-C9L" firstAttribute="centerX" secondItem="OHS-5j-tdH" secondAttribute="centerX" id="Uol-AX-Z3N"/>
+                                            <constraint firstItem="mw4-79-Qmx" firstAttribute="leading" secondItem="OHS-5j-tdH" secondAttribute="leading" constant="5" id="V6y-7m-j2e"/>
+                                            <constraint firstAttribute="bottom" secondItem="RVV-Ca-C9L" secondAttribute="bottom" id="YGO-ga-ZN7"/>
+                                            <constraint firstItem="mw4-79-Qmx" firstAttribute="top" secondItem="OHS-5j-tdH" secondAttribute="top" id="hUx-aw-33m"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="OHS-5j-tdH" firstAttribute="leading" secondItem="VDS-e8-dOJ" secondAttribute="leading" constant="40" id="NpP-uz-fDe"/>
+                                    <constraint firstItem="OHS-5j-tdH" firstAttribute="centerY" secondItem="VDS-e8-dOJ" secondAttribute="centerY" id="QT2-lq-5tn"/>
+                                    <constraint firstAttribute="trailing" secondItem="OHS-5j-tdH" secondAttribute="trailing" constant="40" id="hD7-ig-VcT"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wdg-HS-Fcb">
                                 <rect key="frame" x="0.0" y="140" width="375" height="638"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -23,15 +66,20 @@
                         <color key="backgroundColor" red="0.13725490196078433" green="0.15294117647058825" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Wdg-HS-Fcb" firstAttribute="leading" secondItem="scr-ks-CIf" secondAttribute="leading" id="1ye-wy-jvh"/>
+                            <constraint firstItem="VDS-e8-dOJ" firstAttribute="leading" secondItem="scr-ks-CIf" secondAttribute="leading" id="Gid-cI-uKO"/>
+                            <constraint firstItem="VDS-e8-dOJ" firstAttribute="top" secondItem="scr-ks-CIf" secondAttribute="top" id="MdM-Ax-HTz"/>
                             <constraint firstItem="scr-ks-CIf" firstAttribute="trailing" secondItem="Wdg-HS-Fcb" secondAttribute="trailing" id="QY6-8P-ntx"/>
                             <constraint firstItem="Wdg-HS-Fcb" firstAttribute="top" secondItem="scr-ks-CIf" secondAttribute="top" id="VUq-xd-E7M"/>
+                            <constraint firstItem="scr-ks-CIf" firstAttribute="bottom" secondItem="VDS-e8-dOJ" secondAttribute="bottom" id="aKb-Ir-oKO"/>
                             <constraint firstItem="scr-ks-CIf" firstAttribute="bottom" secondItem="Wdg-HS-Fcb" secondAttribute="bottom" id="fiF-Le-wVx"/>
+                            <constraint firstItem="scr-ks-CIf" firstAttribute="trailing" secondItem="VDS-e8-dOJ" secondAttribute="trailing" id="moN-rF-YDn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="scr-ks-CIf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Channels" id="RpP-zd-7wZ"/>
                     <connections>
                         <outlet property="channelsTableView" destination="Wdg-HS-Fcb" id="d36-dP-EDa"/>
+                        <outlet property="errorView" destination="VDS-e8-dOJ" id="lfQ-oF-JnH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -57,4 +105,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="117.85714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="refresh_icon" width="24" height="24"/>
+    </resources>
 </document>

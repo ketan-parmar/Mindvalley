@@ -129,6 +129,7 @@ extension ChannelsViewModel {
 extension ChannelsViewModel {
     
     func fetchData(completionHandler: @escaping () -> Void) {
+        numberOfSections = 0
         let dispatchGroup = DispatchGroup()
         ///
         dispatchGroup.enter()

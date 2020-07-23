@@ -12,6 +12,8 @@ class ChannelsViewController: UIViewController {
     
     //MARK: - Outlets and Variables
     @IBOutlet weak var channelsTableView: UITableView!
+    @IBOutlet weak var errorView: UIView!
+    
     private var channelsViewModel = ChannelsViewModel()
     
     //MARK: - View controller life cycle
@@ -21,10 +23,20 @@ class ChannelsViewController: UIViewController {
         fetchData()
     }
     
+    //MARK: - Actions
+    @IBAction func refreshButtonClick(_ sender: Any) {
+        self.errorView.isHidden = true
+        self.channelsTableView.isHidden = false
+        fetchData()
+    }
+    
+    
     //MARK: - UI and APIs
     private func setupUI() {
         
         self.navigationController?.navigationBar.setNavigationBarAppearance()
+        
+        errorView.isHidden = true
         
         channelsTableView.register(UINib(nibName: Identifiers.newEpisodesTableViewCell, bundle: nil), forCellReuseIdentifier: Identifiers.newEpisodesTableViewCell)
         
@@ -46,9 +58,16 @@ class ChannelsViewController: UIViewController {
     private func fetchData() {
         
         channelsViewModel.fetchData {
-            self.channelsTableView.reloadData()
+            
+            if self.channelsViewModel.numberOfSections == 3 {
+                self.channelsTableView.reloadData()
+            } else {
+                self.errorView.isHidden = false
+                self.channelsTableView.isHidden = true
+            }
+            
         }
-
+        
     }
 }
 
