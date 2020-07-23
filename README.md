@@ -25,6 +25,7 @@ Application have default dark theme so, we can design light theme and can displa
 
 ### Version control
 - I've used github to manage version controlling and below is the link,
+
 [Github Repository](https://github.com/ketan-parmar/Mindvalley)
 
 
@@ -37,6 +38,8 @@ Thanks,
 - Secured **#1 position** on the Appstore
 
 [Stackoverflow](https://stackoverflow.com/users/6163022/ketan-parmar?tab=profile)
+
 [Linkedin](https://www.linkedin.com/in/ketan-parmar-4b779984/)
+
 [Portfolio](https://ketan-parmar.github.io/documents/portfolio.pdf)
 
