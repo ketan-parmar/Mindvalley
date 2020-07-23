@@ -133,24 +133,20 @@ extension ChannelsViewModel {
         ///
         dispatchGroup.enter()
         getNewEpisodes { (medias, errorMessage) in
-            print("episode")
             dispatchGroup.leave()
         }
         ///
         dispatchGroup.enter()
         getCategories { (categories, errorMessage) in
-            print("category")
             dispatchGroup.leave()
         }
         ///
         dispatchGroup.enter()
         getChannels { (channels, errorMessage) in
-            print("channel")
             dispatchGroup.leave()
         }
         ///
         dispatchGroup.notify(queue: .main) {
-            print("all")
             completionHandler()
         }
         

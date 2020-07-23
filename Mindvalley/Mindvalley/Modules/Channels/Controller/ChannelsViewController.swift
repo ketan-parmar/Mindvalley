@@ -47,7 +47,6 @@ class ChannelsViewController: UIViewController {
         
         channelsViewModel.fetchData {
             self.channelsTableView.reloadData()
-            print("table reloaded")
         }
 
     }
