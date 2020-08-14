@@ -1,4 +1,4 @@
-# Mindvalley
+# Mindvalley - Channel Module
 
 ### Notes
 - Used MVVM architecture
