@@ -1,14 +1,5 @@
 # Mindvalley
 
-###
-Q. What parts of the test did you find challenging and why?
-A. Initially I've added all the tableview cells in the storyboard in the view controller itself and it looks very messay so it was hard to manage it and finally I've created the seperate xibs for every cell.
-
-###
-Q. What feature would you like to add in the future to improve the project?
-A. For this project we can give support for the tablet(iPad), macOS(as per the new universal app support for every platform) and for every orientation.
-Application have default dark theme so, we can design light theme and can display dark or light theme as per the device's settings.
-
 ### Notes
 - Used MVVM architecture
 - Used [Alamofire](https://github.com/Alamofire/Alamofire) to call APIs
